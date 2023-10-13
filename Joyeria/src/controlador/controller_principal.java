@@ -17,7 +17,7 @@ import javafx.scene.input.MouseEvent;
 /**
  * 
  *
- * @author Leocarlos
+ * @author Leocarlos, moises, caleb 
  */
 public class controller_principal implements Initializable {
 
