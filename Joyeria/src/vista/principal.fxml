@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="481.0" maxWidth="862.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controller_principal">
+<AnchorPane maxHeight="481.0" maxWidth="862.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controller_principal">
    <children>
       <HBox layoutY="88.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="393.0" prefWidth="862.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="88.0">
          <children>
@@ -70,7 +70,7 @@
             <Font size="8.0" />
          </font>
       </Label>
-      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="753.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="752.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/carrito.png" />
          </image>
@@ -81,15 +81,16 @@
          </image>
       </ImageView>
       <ComboBox fx:id="combo_categorias" layoutX="67.0" layoutY="10.0" prefHeight="28.0" prefWidth="104.0" promptText="Categorias" style="-fx-background-color: transparent;" />
-      <ImageView fx:id="usuario" fitHeight="20.0" fitWidth="20.0" layoutX="805.0" layoutY="14.0" onMouseClicked="#event_op_usuario" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="usuario" fitHeight="20.0" fitWidth="20.0" layoutX="817.0" layoutY="14.0" onMouseClicked="#event_op_usuario" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/usuario.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="728.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="726.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/buscar.png" />
          </image>
       </ImageView>
+      <ComboBox fx:id="combo_opciones" layoutX="802.0" layoutY="12.0" opacity="0.0" prefHeight="25.0" prefWidth="47.0" />
    </children>
 </AnchorPane>
