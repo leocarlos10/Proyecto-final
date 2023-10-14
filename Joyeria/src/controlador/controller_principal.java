@@ -27,9 +27,6 @@ public class controller_principal implements Initializable {
 
     @FXML
     private ImageView usuario;
-
-    @FXML
-    private ComboBox<?> combo_inv_opciones;
     
      @FXML
     private ComboBox<String> combo_opciones;
