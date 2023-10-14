@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="481.0" maxWidth="862.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controller_principal">
+<AnchorPane maxHeight="481.0" maxWidth="862.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controller_principal">
    <children>
       <HBox layoutY="88.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="393.0" prefWidth="862.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="88.0">
          <children>
@@ -91,6 +91,5 @@
             <Image url="@../imagenes/buscar.png" />
          </image>
       </ImageView>
-      <Label layoutX="378.0" layoutY="26.0" text="Label" />
    </children>
 </AnchorPane>
