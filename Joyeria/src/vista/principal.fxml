@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -81,16 +82,17 @@
          </image>
       </ImageView>
       <ComboBox fx:id="combo_categorias" layoutX="67.0" layoutY="10.0" prefHeight="28.0" prefWidth="104.0" promptText="Categorias" style="-fx-background-color: transparent;" />
-      <ImageView fx:id="usuario" fitHeight="20.0" fitWidth="20.0" layoutX="817.0" layoutY="14.0" onMouseClicked="#event_op_usuario" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="usuario" fitHeight="20.0" fitWidth="20.0" layoutX="806.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/usuario.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="726.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="726.0" layoutY="14.0" onMouseClicked="#event_mostrar_text_buscar" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/buscar.png" />
          </image>
       </ImageView>
-      <ComboBox fx:id="combo_opciones" layoutX="802.0" layoutY="12.0" opacity="0.0" prefHeight="25.0" prefWidth="47.0" />
+      <ComboBox fx:id="combo_opciones" layoutX="801.0" layoutY="12.0" opacity="0.0" prefHeight="25.0" prefWidth="46.0" />
+      <TextField fx:id="text_buscar" layoutX="565.0" layoutY="12.0" onKeyPressed="#event_Enter" promptText="Buscar" visible="false" />
    </children>
 </AnchorPane>

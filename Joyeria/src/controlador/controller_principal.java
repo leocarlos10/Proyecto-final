@@ -11,7 +11,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
 
@@ -21,7 +24,8 @@ import javafx.scene.input.MouseEvent;
  * @author Leocarlos, moises, caleb
  */
 public class controller_principal implements Initializable {
-
+    
+    // componentes FXML
      @FXML
     private ComboBox<String> combo_categorias;
 
@@ -30,11 +34,11 @@ public class controller_principal implements Initializable {
     
      @FXML
     private ComboBox<String> combo_opciones;
-
-    @FXML
-    void event_op_usuario(MouseEvent event) {
-
-    }
+     
+     @FXML
+    private TextField text_buscar;
+     
+     boolean estado_textbuscar=false;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -47,4 +51,30 @@ public class controller_principal implements Initializable {
         combo_categorias.setCursor(Cursor.HAND);
     }    
     
+    // eventos
+    
+    // con este evento manejo la visibilidad del TexField buscar
+    @FXML
+    void event_mostrar_text_buscar(MouseEvent event) {
+       
+        if(estado_textbuscar){
+            text_buscar.setVisible(false);
+            estado_textbuscar=false;
+        }else{
+            text_buscar.setVisible(true);
+            estado_textbuscar=true;
+        }
+    }
+    
+    // cuando el usuario le de enter para buscar se borre lo que esta y se oculte el textfield
+    // ademas de buscar y mostrar los datos del producto necesario.
+    @FXML
+    void event_Enter(KeyEvent event) {
+        // con este condicional verifico que el evento de accione solo cuando se presione la tecla enter
+        if(event.getCode() == KeyCode.ENTER){
+            text_buscar.setText("");
+            text_buscar.setVisible(false);
+        }
+        // agregar el codigo para que muestre la venta del producto buscado
+    }
 }
