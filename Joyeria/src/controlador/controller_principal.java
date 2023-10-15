@@ -12,11 +12,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -27,29 +30,63 @@ import javafx.scene.input.MouseEvent;
 public class controller_principal implements Initializable {
     
     // componentes FXML
-     @FXML
-    private ComboBox<Button> combo_categorias;
+    
 
     @FXML
     private ImageView usuario;
     
-     @FXML
-    private ComboBox<Button> combo_opciones;
-     
-     @FXML
+    @FXML
     private TextField text_buscar;
-     
+    
+     @FXML
+    private SplitMenuButton Menu_categorias;
+
+    @FXML
+    private SplitMenuButton menu_opciones;
+
      boolean estado_textbuscar=false;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        // cargamos el comboBox de las categorias y el de las opciones de la cuenta
-        Cargar_combo_categorias();
-        Cargar_combo_opciones();
+        // cargamos en una lista los botones del comboBox de categorias y opciones
+        String []opciones ={"Inicio de sesion","Registrarse","Historial de compra"};
+        String[] categorias = { "Anillos de hombre","Anillos de mujer","Cadenas de hombre","Cadenas de mujer"};
+        MenuItem item_opciones;
+        MenuItem item_categorias;
+        // este bucle for es el encargado de cargar los menuItem en el SplitMenuButton de opciones 
+        // ademas de agregarle un evento a cada boton
+        for(String i: opciones){
+            
+            item_opciones = new MenuItem(i);
+            item_opciones.setOnAction(Event ->{
+                
+                manejo_eventos(i);
+            });
+            
+            // luego lleno el comboBox de opciones
+            menu_opciones.getItems().add(item_opciones);
+            
+        }
+        
+         // este bucle for es el encargado de cargar los MenuItem en el SplitMenuButton de categorias
+        // ademas de agregarle un evento a cada boton
+         for(String i: categorias){
+             
+            item_categorias = new MenuItem(i);
+            item_categorias.setOnAction(Event ->{
+                
+                manejo_eventos(i);
+            });
+           
+            // luego lleno el comboBox de opciones
+            Menu_categorias.getItems().add(item_categorias);
+           
+        }
+        
         // con este hacemos que cuando el cursor este sobre los comboBox se vuelvan una manito.
-        combo_opciones.setCursor(Cursor.HAND);
-        combo_categorias.setCursor(Cursor.HAND);
+        menu_opciones.setCursor(Cursor.HAND);
+        Menu_categorias.setCursor(Cursor.HAND);
     }    
     
     // eventos 
@@ -71,7 +108,7 @@ public class controller_principal implements Initializable {
     // ademas de buscar y mostrar los datos del producto necesario.
     @FXML
     void event_Enter(KeyEvent event) {
-        // con este condicional verifico que el evento de accione solo cuando se presione la tecla enter
+        // con este condicional verifico que el evento se accione solo cuando se presione la tecla enter
         if(event.getCode() == KeyCode.ENTER){
             text_buscar.setText("");
             text_buscar.setVisible(false);
@@ -79,28 +116,42 @@ public class controller_principal implements Initializable {
         // agregar el codigo para que muestre la venta del producto buscado
     }
     
-    // metodos que cargan los comboBox.
-    public void Cargar_combo_categorias(){
-        
-        Button anillos_hombre = new Button("Anillos de hombre");
-        anillos_hombre.setPrefWidth(150);
-        Button anillos_mujer = new Button("Anillos de mujer");
-         anillos_mujer.setPrefWidth(150);
-        Button cadenas_hombre = new Button("Cadenas de hombre");
-         cadenas_hombre.setPrefWidth(150);
-        Button cadenas_mujer = new Button("Cadenas de mujer");
-         cadenas_mujer.setPrefWidth(150);
-        combo_categorias.getItems().addAll(anillos_hombre,anillos_mujer,cadenas_hombre,cadenas_mujer);
-    }
+    public void manejo_eventos(String nombre){
     
-     public void Cargar_combo_opciones(){
-        
-        Button incio_sesion = new Button("Inicio de sesion");
-        incio_sesion.setPrefWidth(150);
-        Button registro = new Button("Registrarse");
-        registro.setPrefWidth(150);
-        Button historial = new Button("Historial de compra");
-        historial.setPrefWidth(150);
-        combo_opciones.getItems().addAll(incio_sesion,registro,historial);
+        // con un switch de Strings hago la verificacion correspondiente
+        switch(nombre){
+            
+            case "Inicio de sesion":
+                JOptionPane.showMessageDialog(null, "Evento generado para el inicio de sesion");
+                break;
+
+            case "Registrarse":
+                JOptionPane.showMessageDialog(null, "Evento generado para el Registrarse");
+                break;
+
+            case "Historial de compra":
+                JOptionPane.showMessageDialog(null, "Evento generado para el Historial de compra");
+                break;
+
+            case "Anillos de hombre":
+                JOptionPane.showMessageDialog(null, "Evento generado para anillo de hombre");
+                break;
+
+            case "Anillos de mujer":
+                JOptionPane.showMessageDialog(null, "Evento generado para anillos de mujer");
+                break;
+
+            case "Cadenas de hombre":
+                JOptionPane.showMessageDialog(null, "Evento generado para cadenas de hombre");
+                break;
+
+            case "Cadenas de mujer":
+                JOptionPane.showMessageDialog(null, "Evento generado para cadenas de mujer");
+                break;
+                
+            default:
+                JOptionPane.showMessageDialog(null, "no se ejecuto ningun evento");
+                break;
+        }
     }
 }
