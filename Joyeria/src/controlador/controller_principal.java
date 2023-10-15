@@ -49,13 +49,13 @@ public class controller_principal implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        // cargamos en una lista los botones del comboBox de categorias y opciones
+        // cargamos en una lista los nombres de categorias y opciones
         String []opciones ={"Inicio de sesion","Registrarse","Historial de compra"};
         String[] categorias = { "Anillos de hombre","Anillos de mujer","Cadenas de hombre","Cadenas de mujer"};
         MenuItem item_opciones;
         MenuItem item_categorias;
         // este bucle for es el encargado de cargar los menuItem en el SplitMenuButton de opciones 
-        // ademas de agregarle un evento a cada boton
+        // ademas de agregarle un evento a cada MenuItem
         for(String i: opciones){
             
             item_opciones = new MenuItem(i);
@@ -70,7 +70,7 @@ public class controller_principal implements Initializable {
         }
         
          // este bucle for es el encargado de cargar los MenuItem en el SplitMenuButton de categorias
-        // ademas de agregarle un evento a cada boton
+        // ademas de agregarle un evento a cada MenuItem
          for(String i: categorias){
              
             item_categorias = new MenuItem(i);
@@ -116,6 +116,7 @@ public class controller_principal implements Initializable {
         // agregar el codigo para que muestre la venta del producto buscado
     }
     
+    // este metodo me permita manejar los eventos dependiendo el nombre del menuItem
     public void manejo_eventos(String nombre){
     
         // con un switch de Strings hago la verificacion correspondiente
