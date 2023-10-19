@@ -83,7 +83,7 @@
       </ImageView>
       <ImageView fx:id="usuario" fitHeight="20.0" fitWidth="20.0" layoutX="806.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenes/usuario.png" />
+            <Image url="@../imagenes/account%20image.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="726.0" layoutY="14.0" onMouseClicked="#event_mostrar_text_buscar" pickOnBounds="true" preserveRatio="true">

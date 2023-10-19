@@ -9,7 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import controlador.controller_principal;
 /**
  *
  * @author Leocarlos
@@ -21,6 +21,9 @@ public class Main extends Application{
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/principal.fxml"));
         Parent root = loader.load();
+        // con esto setamos el stage(la ventana principal) para poder enviarla al controlador
+        controller_principal controller = loader.getController();
+        controller.setStage(stage); 
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

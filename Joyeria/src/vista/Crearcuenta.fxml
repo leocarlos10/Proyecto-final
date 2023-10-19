@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="393.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Crear_cuentaController">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0">
+         <children>
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="366.0" prefWidth="833.0" style="-fx-background-color: black;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="221.0" prefWidth="408.0">
+                     <children>
+                        <Pane prefHeight="87.0" prefWidth="408.0" style="-fx-background-color: F0DBB0;">
+                           <children>
+                              <ImageView fitHeight="87.0" fitWidth="83.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/account%20image.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="50.0" left="170.0" right="155.0" />
+                           </VBox.margin>
+                        </Pane>
+                        <TextField promptText="Email" style="-fx-background-color: black;">
+                           <VBox.margin>
+                              <Insets left="80.0" right="80.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Separator prefWidth="200.0" style="-fx-background-color: white;">
+                           <VBox.margin>
+                              <Insets bottom="25.0" left="80.0" right="80.0" />
+                           </VBox.margin>
+                        </Separator>
+                        <TextField promptText="Contraseña" style="-fx-background-color: black;">
+                           <VBox.margin>
+                              <Insets left="80.0" right="80.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Separator prefWidth="200.0" style="-fx-background-color: white;">
+                           <VBox.margin>
+                              <Insets left="80.0" right="80.0" />
+                           </VBox.margin>
+                        </Separator>
+                        <Button mnemonicParsing="false" style="-fx-background-color: F0DBB0;" text="Registrarse">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#event_volver" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+               <image>
+                  <Image url="@../imagenes/Arrow%20White%20Png.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

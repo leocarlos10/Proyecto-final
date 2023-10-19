@@ -8,10 +8,11 @@ package controlador;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextField;
@@ -19,6 +20,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
 
@@ -26,12 +28,24 @@ import javax.swing.JOptionPane;
  * 
  *
  * @author Leocarlos, moises, caleb
+ * 
+ * correcciones por hacer 
+ * el crear cuenta agregarlo en la vista de incio de sesion como un boton 
+ * estas registrado en nuestro sistema ? crear cuenta esto con el fin de evitar errores con 
+ * el stage
  */
 public class controller_principal implements Initializable {
     
-    // componentes FXML
     
-
+    Stage stage;
+    
+    // con este metodo seteamos el stage de la ventana principal 
+    // con este puedo manejar que scenes mostrar
+    public void setStage(Stage stage1){
+        
+        stage=stage1;
+    }
+    // componentes FXML
     @FXML
     private ImageView usuario;
     
@@ -56,31 +70,34 @@ public class controller_principal implements Initializable {
         MenuItem item_categorias;
         // este bucle for es el encargado de cargar los menuItem en el SplitMenuButton de opciones 
         // ademas de agregarle un evento a cada MenuItem
-        for(String i: opciones){
-            
-            item_opciones = new MenuItem(i);
-            item_opciones.setOnAction(Event ->{
-                
-                manejo_eventos(i);
-            });
-            
-            // luego lleno el comboBox de opciones
-            menu_opciones.getItems().add(item_opciones);
-            
-        }
+       
+            for(String i: opciones){
+
+                item_opciones = new MenuItem(i);
+                item_opciones.setOnAction(Event ->{
+                    
+                    manejo_eventos(i);
+                });
+
+                // luego lleno el comboBox de opciones
+                menu_opciones.getItems().add(item_opciones);
+
+            }
         
-         // este bucle for es el encargado de cargar los MenuItem en el SplitMenuButton de categorias
-        // ademas de agregarle un evento a cada MenuItem
-         for(String i: categorias){
-             
-            item_categorias = new MenuItem(i);
-            item_categorias.setOnAction(Event ->{
-                
-                manejo_eventos(i);
-            });
-           
-            // luego lleno el comboBox de opciones
-            Menu_categorias.getItems().add(item_categorias);
+
+             // este bucle for es el encargado de cargar los MenuItem en el SplitMenuButton de categorias
+            // ademas de agregarle un evento a cada MenuItem
+             for(String i: categorias){
+
+                item_categorias = new MenuItem(i);
+                item_categorias.setOnAction(Event ->{
+
+                    manejo_eventos(i);
+                });
+
+                // luego lleno el comboBox de opciones
+                Menu_categorias.getItems().add(item_categorias);
+         
            
         }
         
@@ -123,11 +140,24 @@ public class controller_principal implements Initializable {
         switch(nombre){
             
             case "Inicio de sesion":
-                JOptionPane.showMessageDialog(null, "Evento generado para el inicio de sesion");
+                
+                try{
+                     cambio_ventana("/vista/inicioSesion.fxml");
+                }catch(Exception e){
+                    
+                     System.out.println("Error en el cambio de la vista inciar sesion"+e);
+                }
                 break;
 
             case "Registrarse":
-                JOptionPane.showMessageDialog(null, "Evento generado para el Registrarse");
+                 try{
+                     
+                     cambio_ventana("/vista/Crearcuenta.fxml");
+                     
+                }catch(Exception e){
+                    
+                  System.out.println("Error en el cambio de la vista crear cuenta"+e);
+                }
                 break;
 
             case "Historial de compra":
@@ -154,5 +184,31 @@ public class controller_principal implements Initializable {
                 JOptionPane.showMessageDialog(null, "no se ejecuto ningun evento");
                 break;
         }
+    }
+    
+    // este es el metodo encargado de cambiar la scene teniendo en cuenta la url de la ventana.
+    public void cambio_ventana(String url) throws Exception{
+        
+        // si el url apunta a la vista de inicio de sesion muestra esa vista de lo contrario muestra la vista de Crear cuenta.
+        if(url.equals("/vista/inicioSesion.fxml")){
+            
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(url));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            InicioSesionController controller = loader.getController();
+            controller.setStage1(stage);
+            
+        }else{
+             
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(url));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            Crear_cuentaController controller = loader.getController();
+            controller.setStage2(stage);
+            
+        }
+        
     }
 }
