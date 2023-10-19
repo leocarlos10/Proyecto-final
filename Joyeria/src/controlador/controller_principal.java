@@ -35,12 +35,12 @@ public class controller_principal implements Initializable {
     
     Stage stage;
     
-    // con este metodo seteamos el stage de la ventana principal 
-    // con este puedo manejar que scenes mostrar
+    // con este metodo seteamos el stage desde el Main esto con el fin de poder manejar la scene en el stage(La ventana raiz)
     public void setStage(Stage stage1){
         
         stage=stage1;
     }
+    
     // componentes FXML
     @FXML
     private ImageView usuario;
@@ -68,14 +68,16 @@ public class controller_principal implements Initializable {
         // ademas de agregarle un evento a cada MenuItem
        
             for(String i: opciones){
-
+                
+                // instancio el menuItem y de paso le agrego el nombre
                 item_opciones = new MenuItem(i);
+                // luego agrego el evento de cada uno.
                 item_opciones.setOnAction(Event ->{
                     
                     manejo_eventos(i);
                 });
 
-                // luego lleno el comboBox de opciones
+                // por ultimo lleno el comboBox de opciones
                 menu_opciones.getItems().add(item_opciones);
 
             }
@@ -84,20 +86,21 @@ public class controller_principal implements Initializable {
              // este bucle for es el encargado de cargar los MenuItem en el SplitMenuButton de categorias
             // ademas de agregarle un evento a cada MenuItem
              for(String i: categorias){
-
+                // instancio el menuItem y de paso le agrego el nombre
                 item_categorias = new MenuItem(i);
+                // luego agrego el evento de cada uno.
                 item_categorias.setOnAction(Event ->{
-
+                
                     manejo_eventos(i);
                 });
 
-                // luego lleno el comboBox de opciones
+                // por utlimo lleno el comboBox de opciones
                 Menu_categorias.getItems().add(item_categorias);
          
            
         }
         
-        // con este hacemos que cuando el cursor este sobre los comboBox se vuelvan una manito.
+        // con esto hacemos que cuando el cursor este sobre los SplitMenuButton  se vuelvan una manito.
         menu_opciones.setCursor(Cursor.HAND);
         Menu_categorias.setCursor(Cursor.HAND);
     }    
