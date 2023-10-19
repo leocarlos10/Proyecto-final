@@ -29,10 +29,6 @@ import javax.swing.JOptionPane;
  *
  * @author Leocarlos, moises, caleb
  * 
- * correcciones por hacer 
- * el crear cuenta agregarlo en la vista de incio de sesion como un boton 
- * estas registrado en nuestro sistema ? crear cuenta esto con el fin de evitar errores con 
- * el stage
  */
 public class controller_principal implements Initializable {
     
@@ -209,6 +205,5 @@ public class controller_principal implements Initializable {
             controller.setStage2(stage);
             
         }
-        
     }
 }
