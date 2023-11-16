@@ -1,67 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="481.0" maxWidth="862.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controller_principal">
+<AnchorPane maxHeight="481.0" maxWidth="862.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controller_principal">
    <children>
-      <HBox layoutY="88.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="393.0" prefWidth="862.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="88.0">
-         <children>
-            <ImageView fitHeight="190.0" fitWidth="218.0" pickOnBounds="true" preserveRatio="true">
-               <HBox.margin>
-                  <Insets left="60.0" top="95.0" />
-               </HBox.margin>
-               <image>
-                  <Image url="@../imagenes/Hombres%20Anillo%20minimalista.jpeg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="190.0" fitWidth="218.0" pickOnBounds="true" preserveRatio="true">
-               <HBox.margin>
-                  <Insets left="60.0" top="95.0" />
-               </HBox.margin>
-               <image>
-                  <Image url="@../imagenes/collar.jpeg" />
-               </image>
-            </ImageView>
-            <VBox alignment="CENTER" prefHeight="393.0" prefWidth="336.0" HBox.hgrow="ALWAYS">
-               <HBox.margin>
-                  <Insets left="100.0" right="100.0" />
-               </HBox.margin>
-               <children>
-                  <Label text="JOYAS NEGRAS" textFill="#fdf8f8">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label prefHeight="60.0" prefWidth="153.0" text="EL COLOR DE LA ELEGANCIA" textFill="#fbf7f7" wrapText="true" VBox.vgrow="ALWAYS">
-                     <VBox.margin>
-                        <Insets left="15.0" top="20.0" />
-                     </VBox.margin>
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="MIRA LOS MODELOS" textFill="#fff9f9" VBox.vgrow="ALWAYS">
-                     <VBox.margin>
-                        <Insets left="5.0" top="10.0" />
-                     </VBox.margin>
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-      <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="13.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="13.0" layoutY="3.0" onMouseClicked="#event_volver_pri" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/diamantepng.png" />
          </image>
@@ -71,7 +21,7 @@
             <Font size="8.0" />
          </font>
       </Label>
-      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="751.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="751.0" layoutY="14.0" onMouseClicked="#event_carrito" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/carrito.png" />
          </image>
@@ -94,5 +44,6 @@
       <TextField fx:id="text_buscar" layoutX="565.0" layoutY="12.0" onKeyPressed="#event_Enter" promptText="Buscar" visible="false" />
       <SplitMenuButton fx:id="Menu_categorias" layoutX="72.0" layoutY="12.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Categorias" />
       <SplitMenuButton fx:id="menu_opciones" layoutX="787.0" layoutY="12.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="39.0" />
+      <StackPane fx:id="StackPane" layoutY="88.0" prefHeight="393.0" prefWidth="862.0" />
    </children>
 </AnchorPane>

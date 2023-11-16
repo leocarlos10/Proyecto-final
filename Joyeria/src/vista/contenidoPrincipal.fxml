@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="contenidoHbox" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="393.0" prefWidth="862.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="190.0" fitWidth="218.0" pickOnBounds="true" preserveRatio="true">
+         <HBox.margin>
+            <Insets left="60.0" top="95.0" />
+         </HBox.margin>
+         <image>
+            <Image url="@../imagenes/AnilloNegro1.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="190.0" fitWidth="218.0" pickOnBounds="true" preserveRatio="true">
+         <HBox.margin>
+            <Insets left="60.0" top="95.0" />
+         </HBox.margin>
+         <image>
+            <Image url="@../imagenes/collar.jpeg" />
+         </image>
+      </ImageView>
+      <VBox alignment="CENTER" prefHeight="393.0" prefWidth="336.0" HBox.hgrow="ALWAYS">
+         <HBox.margin>
+            <Insets left="100.0" right="100.0" />
+         </HBox.margin>
+         <children>
+            <Label text="JOYAS NEGRAS" textFill="#fdf8f8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="60.0" prefWidth="153.0" text="EL COLOR DE LA ELEGANCIA" textFill="#fbf7f7" wrapText="true" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="15.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="MIRA LOS MODELOS" textFill="#fff9f9" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</HBox>

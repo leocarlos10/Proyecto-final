@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
@@ -20,6 +21,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
@@ -34,6 +37,7 @@ public class controller_principal implements Initializable {
     
     
     Stage stage;
+    Node contenidoActual=null;
     
     // con este metodo seteamos el stage desde el Main esto con el fin de poder manejar la scene en el stage(La ventana raiz)
     public void setStage(Stage stage1){
@@ -43,7 +47,15 @@ public class controller_principal implements Initializable {
     
     // componentes FXML
     @FXML
+    private HBox contenidoHbox;
+    
+    @FXML
     private ImageView usuario;
+    
+     @FXML
+    private StackPane StackPane;
+     
+     HBox CPrincipal,CAnillosHombre,CAnillosMujer,C_Cadenashombre,C_Cadenasmujer;
     
     @FXML
     private TextField text_buscar;
@@ -99,10 +111,27 @@ public class controller_principal implements Initializable {
          
            
         }
-        
         // con esto hacemos que cuando el cursor este sobre los SplitMenuButton  se vuelvan una manito.
         menu_opciones.setCursor(Cursor.HAND);
         Menu_categorias.setCursor(Cursor.HAND);
+        
+        // carga de las respectivas ventanas
+        try {
+           CPrincipal = cargar_ventanas("/vista/contenidoPrincipal.fxml"); 
+           CAnillosHombre = cargar_ventanas("/vista_catalogo/Catalogo_anilloshombre.fxml");
+           CAnillosMujer = cargar_ventanas("/vista_catalogo/Catalogo_anillosmujer.fxml");
+           C_Cadenashombre = cargar_ventanas("/vista_catalogo/Catalogo_cadenashombre.fxml");
+          C_Cadenasmujer = cargar_ventanas("/vista_catalogo/Catalogo_cadenasmujer.fxml");
+           StackPane.getChildren().addAll(CPrincipal,CAnillosHombre,CAnillosMujer,C_Cadenashombre,C_Cadenasmujer);
+           // controlamos la visibilidad de la vistas
+           CPrincipal.setVisible(true);
+           CAnillosHombre.setVisible(false);
+           CAnillosMujer.setVisible(false);
+           C_Cadenashombre.setVisible(false);
+           C_Cadenasmujer.setVisible(false);
+        } catch (Exception e) {
+          JOptionPane.showMessageDialog(null, "ERROR en el cambio de ventana "+e);
+        }
     }    
     
     // eventos 
@@ -130,6 +159,27 @@ public class controller_principal implements Initializable {
             text_buscar.setVisible(false);
         }
         // agregar el codigo para que muestre la venta del producto buscado
+    }
+    
+    @FXML
+    void event_volver_pri(MouseEvent event) {
+        
+        CPrincipal.setVisible(true);
+        CAnillosHombre.setVisible(false);
+        CAnillosMujer.setVisible(false);
+        C_Cadenashombre.setVisible(false);
+        C_Cadenasmujer.setVisible(false);
+    }
+    
+     @FXML
+    void event_carrito(MouseEvent event) {
+         
+        try {
+              cambio_ventana("/vista/Carrito.fxml");
+         } catch (Exception e) {
+             JOptionPane.showMessageDialog(null, "ERROR en el cambio de ventana "+e);
+         }
+        
     }
     
     // este metodo me permita manejar los eventos dependiendo el nombre del menuItem
@@ -164,23 +214,41 @@ public class controller_principal implements Initializable {
                 break;
 
             case "Anillos de hombre":
-                JOptionPane.showMessageDialog(null, "Evento generado para anillo de hombre");
+                
+                CPrincipal.setVisible(false);
+                CAnillosHombre.setVisible(true);
+                CAnillosMujer.setVisible(false);
+                C_Cadenashombre.setVisible(false);
+                C_Cadenasmujer.setVisible(false);
                 break;
 
             case "Anillos de mujer":
-                JOptionPane.showMessageDialog(null, "Evento generado para anillos de mujer");
+                
+                CPrincipal.setVisible(false);
+                CAnillosHombre.setVisible(false);
+                CAnillosMujer.setVisible(true);
+                C_Cadenashombre.setVisible(false);
+                C_Cadenasmujer.setVisible(false);
                 break;
 
             case "Cadenas de hombre":
-                JOptionPane.showMessageDialog(null, "Evento generado para cadenas de hombre");
+                
+                CPrincipal.setVisible(false);
+                CAnillosHombre.setVisible(false);
+                CAnillosMujer.setVisible(false);
+                C_Cadenashombre.setVisible(true);
+                C_Cadenasmujer.setVisible(false);
                 break;
 
             case "Cadenas de mujer":
-                JOptionPane.showMessageDialog(null, "Evento generado para cadenas de mujer");
+                CPrincipal.setVisible(false);
+                CAnillosHombre.setVisible(false);
+                CAnillosMujer.setVisible(false);
+                C_Cadenashombre.setVisible(false);
+                C_Cadenasmujer.setVisible(true);
                 break;
                 
             default:
-                JOptionPane.showMessageDialog(null, "no se ejecuto ningun evento");
                 break;
         }
     }
@@ -198,15 +266,43 @@ public class controller_principal implements Initializable {
             InicioSesionController controller = loader.getController();
             controller.setStage1(stage);
             
-        }else{
+        }else if(url.equals("/vista/Crearcuenta.fxml")){
              
             FXMLLoader loader = new FXMLLoader(getClass().getResource(url));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             stage.setScene(scene);
             Crear_cuentaController controller = loader.getController();
-            controller.setStage2(stage);
+            controller.setStage2(stage); 
             
+        }else if(url.equals("/vista/Carrito.fxml")){
+           
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(url));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            CarritoController controlador = loader.getController();
+            controlador.setStage(stage);
         }
+    }
+    
+    // este metodo nos ayuda a pregar las ventanas que estan en el componente StackPane
+    public HBox cargar_ventanas(String url) throws Exception {
+        
+        HBox hbox= FXMLLoader.load(getClass().getResource(url));
+        return hbox;
+    }
+    
+    public FXMLLoader getLoader(String url) {
+        
+        FXMLLoader loader =  null;
+        try {
+            loader = new FXMLLoader(getClass().getResource(url));
+            Parent root = loader.load();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR "+e);
+        }
+        
+        return loader;
     }
 }

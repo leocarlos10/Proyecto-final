@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Catalogo_anilloshombreController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="393.0" prefWidth="862.0" style="-fx-background-color: black;">
+         <children>
+            <ImageView fitHeight="121.0" fitWidth="109.0" layoutX="483.0" layoutY="28.0" onMouseClicked="#event_info_vista2" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/Anillo2.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="144.0" fitWidth="98.0" layoutX="183.0" layoutY="18.0" onMouseClicked="#event_ventana_info" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/AnilloNegro1.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="109.0" fitWidth="134.0" layoutX="178.0" layoutY="217.0" onMouseClicked="#event_info_vista3" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/AnilloNegro3.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="121.0" fitWidth="98.0" layoutX="489.0" layoutY="203.0" onMouseClicked="#event_info_vista4" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/AnilloNegro4.jpeg" />
+               </image>
+            </ImageView>
+            <Label layoutX="183.0" layoutY="153.0" prefHeight="17.0" prefWidth="98.0" text="Anillo negro" textFill="#f8f5f5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="183.0" layoutY="180.0" prefHeight="17.0" prefWidth="98.0" text="115.000 COP" textFill="#fcf7f7">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="483.0" layoutY="148.0" prefHeight="21.0" prefWidth="137.0" text="Anillo natural balck" textFill="#f8f5f5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="489.0" layoutY="351.0" prefHeight="17.0" prefWidth="98.0" text="130.000 COP" textFill="#fcf7f7">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="178.0" layoutY="328.0" prefHeight="21.0" prefWidth="137.0" text="Anillo chains wolfei" textFill="#f8f5f5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="178.0" layoutY="352.0" prefHeight="17.0" prefWidth="109.0" text="150.000 COP" textFill="#fcf7f7">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="489.0" layoutY="328.0" prefHeight="21.0" prefWidth="137.0" text="Anillo personalizado" textFill="#f8f5f5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="483.0" layoutY="168.0" prefHeight="17.0" prefWidth="98.0" text="200000 COP" textFill="#fcf7f7">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
