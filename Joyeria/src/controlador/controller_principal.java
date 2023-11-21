@@ -14,6 +14,7 @@ import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextField;
@@ -37,17 +38,14 @@ public class controller_principal implements Initializable {
     
     
     Stage stage;
-    Node contenidoActual=null;
-    
     // con este metodo seteamos el stage desde el Main esto con el fin de poder manejar la scene en el stage(La ventana raiz)
     public void setStage(Stage stage1){
         
         stage=stage1;
     }
     
-    // componentes FXML
     @FXML
-    private HBox contenidoHbox;
+    private Label label_email_ususario;
     
     @FXML
     private ImageView usuario;
@@ -132,7 +130,15 @@ public class controller_principal implements Initializable {
         } catch (Exception e) {
           JOptionPane.showMessageDialog(null, "ERROR en el cambio de ventana "+e);
         }
-    }    
+        
+       
+    }
+    
+    // metodo para setear el email del usuario que ha iniciado sesion
+     public void setEmail(String email){
+         
+        label_email_ususario.setText(email); 
+    }
     
     // eventos 
     
@@ -179,6 +185,18 @@ public class controller_principal implements Initializable {
          } catch (Exception e) {
              JOptionPane.showMessageDialog(null, "ERROR en el cambio de ventana "+e);
          }
+        
+    }
+    
+     @FXML
+    private void event_cambio_vista_favoritos(MouseEvent event) {
+         
+        try {
+              cambio_ventana("/vista/favoritos.fxml"); 
+         } catch (Exception e) {
+             JOptionPane.showMessageDialog(null, "ERROR en el cambio de ventana "+e);
+         }
+        
         
     }
     
@@ -283,6 +301,15 @@ public class controller_principal implements Initializable {
             stage.setScene(scene);
             CarritoController controlador = loader.getController();
             controlador.setStage(stage);
+            
+        }else if(url.equals("/vista/favoritos.fxml")){
+            
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(url));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            FavoritosController controlador = loader.getController();
+            controlador.setStage(stage);
         }
     }
     
@@ -292,17 +319,6 @@ public class controller_principal implements Initializable {
         HBox hbox= FXMLLoader.load(getClass().getResource(url));
         return hbox;
     }
-    
-    public FXMLLoader getLoader(String url) {
-        
-        FXMLLoader loader =  null;
-        try {
-            loader = new FXMLLoader(getClass().getResource(url));
-            Parent root = loader.load();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "ERROR "+e);
-        }
-        
-        return loader;
-    }
+
+   
 }

@@ -41,7 +41,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="483.0" layoutY="148.0" prefHeight="21.0" prefWidth="137.0" text="Anillo natural balck" textFill="#f8f5f5">
+            <Label layoutX="483.0" layoutY="148.0" prefHeight="21.0" prefWidth="137.0" text="Anillo natural black" textFill="#f8f5f5">
                <font>
                   <Font size="15.0" />
                </font>

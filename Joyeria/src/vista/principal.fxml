@@ -21,29 +21,30 @@
             <Font size="8.0" />
          </font>
       </Label>
-      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="751.0" layoutY="14.0" onMouseClicked="#event_carrito" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="750.0" layoutY="14.0" onMouseClicked="#event_carrito" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/carrito.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="15.0" fitWidth="16.0" layoutX="779.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="15.0" fitWidth="16.0" layoutX="778.0" layoutY="17.0" onMouseClicked="#event_cambio_vista_favoritos" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/favoritos.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="usuario" fitHeight="20.0" fitWidth="20.0" layoutX="806.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="usuario" fitHeight="20.0" fitWidth="20.0" layoutX="813.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/account%20image.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="726.0" layoutY="14.0" onMouseClicked="#event_mostrar_text_buscar" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="725.0" layoutY="14.0" onMouseClicked="#event_mostrar_text_buscar" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/buscar.png" />
          </image>
       </ImageView>
       <TextField fx:id="text_buscar" layoutX="565.0" layoutY="12.0" onKeyPressed="#event_Enter" promptText="Buscar" visible="false" />
       <SplitMenuButton fx:id="Menu_categorias" layoutX="72.0" layoutY="12.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Categorias" />
-      <SplitMenuButton fx:id="menu_opciones" layoutX="787.0" layoutY="12.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="39.0" />
+      <SplitMenuButton fx:id="menu_opciones" layoutX="796.0" layoutY="13.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="39.0" />
       <StackPane fx:id="StackPane" layoutY="88.0" prefHeight="393.0" prefWidth="862.0" />
+      <Label fx:id="label_email_ususario" layoutX="704.0" layoutY="51.0" prefHeight="17.0" prefWidth="149.0" />
    </children>
 </AnchorPane>

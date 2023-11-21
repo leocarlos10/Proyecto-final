@@ -56,17 +56,69 @@ public class Catalogo_anilloshombreController implements Initializable {
 
     @FXML
     private void event_info_vista2(MouseEvent event) {
-          JOptionPane.showMessageDialog(null, "Evento generado");
+        
+         try {
+             
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista_info_anilloshombre/info_anillo_negro2.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(scene);
+            stage.show();
+            Info_anillo_negro2Controller controlador = loader.getController();
+            controlador.setStage(stage);
+           
+            
+         } catch (Exception e) {
+             JOptionPane.showMessageDialog(null, " Error "+e);
+         }
+        
+          
     }
 
     @FXML
     private void event_info_vista3(MouseEvent event) {
-          JOptionPane.showMessageDialog(null, "Evento generado");
+         try {
+             
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista_info_anilloshombre/info_anillo_negro3.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(scene);
+            stage.show();
+            Info_anillo_negro3Controller controlador = loader.getController();
+            controlador.setStage(stage);
+           
+            
+         } catch (Exception e) {
+             JOptionPane.showMessageDialog(null, " Error "+e);
+         }
+        
+          
     }
 
     @FXML
     private void event_info_vista4(MouseEvent event) {
-          JOptionPane.showMessageDialog(null, "Evento generado");
+        
+         try {
+             
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista_info_anilloshombre/info_anillo_negro4.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(scene);
+            stage.show();
+            Info_anillo_negro4Controller controlador = loader.getController();
+            controlador.setStage(stage);
+           
+            
+         } catch (Exception e) {
+             JOptionPane.showMessageDialog(null, " Error "+e);
+         }
+          
     }
 
    

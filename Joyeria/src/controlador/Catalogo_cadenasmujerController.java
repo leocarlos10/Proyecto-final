@@ -37,27 +37,27 @@ public class Catalogo_cadenasmujerController implements Initializable {
     // evento para mostrar las ventanas de Informacion personal de cada producto seleccionado
     private void event_info_vista(MouseEvent event) {
         
-        JOptionPane.showMessageDialog(null, "Evento generado");
+        
     }
 
     @FXML
     private void event_info_vista2(MouseEvent event) {
-         JOptionPane.showMessageDialog(null, "Evento generado");
+         
     }
 
     @FXML
     private void event_info_vista1(MouseEvent event) {
-         JOptionPane.showMessageDialog(null, "Evento generado");
+         
     }
 
     @FXML
     private void event_info_vista3(MouseEvent event) {
-         JOptionPane.showMessageDialog(null, "Evento generado");
+         
     }
 
     @FXML
     private void event_info_vista4(MouseEvent event) {
-         JOptionPane.showMessageDialog(null, "Evento generado");
+         
     }
     
 }
