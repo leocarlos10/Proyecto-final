@@ -13,22 +13,22 @@
          <children>
             <ImageView fitHeight="121.0" fitWidth="109.0" layoutX="483.0" layoutY="28.0" onMouseClicked="#event_info_vista2" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagenes/minimalista%20oro%2018k.jpg" />
+                  <Image url="@../imagenes/anillomujer2.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="144.0" fitWidth="98.0" layoutX="183.0" layoutY="40.0" onMouseClicked="#event_info_vista1" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagenes/paquete%20gotico.jpg" />
+                  <Image url="@../imagenes/anillomujer1.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="109.0" fitWidth="134.0" layoutX="178.0" layoutY="217.0" onMouseClicked="#event_info_vista3" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagenes/Trebol%20rubí%20oro%209k.jpg" />
+                  <Image url="@../imagenes/anillomujer3.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="121.0" fitWidth="98.0" layoutX="479.0" layoutY="226.0" onMouseClicked="#event_info_vista4" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagenes/Oro%20blanco%2014k%20elegante.jpg" />
+                  <Image url="@../imagenes/anillomujer4.jpg" />
                </image>
             </ImageView>
             <Label layoutX="183.0" layoutY="144.0" prefHeight="21.0" prefWidth="109.0" text="Paquete gótico" textFill="#f8f5f5">
