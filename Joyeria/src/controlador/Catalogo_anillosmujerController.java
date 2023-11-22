@@ -72,8 +72,24 @@ public class Catalogo_anillosmujerController implements Initializable {
     
     @FXML
     private void event_info_vista3(MouseEvent event) {
+    
+    try {
+             
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista_info_anillosmujer/info_anillomujer3.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(scene);
+            stage.show();
+            Info_anillosmujer3Controller controlador = loader.getController();
+            controlador.setStage(stage);
+           
+            
+         } catch (Exception e) {
+             JOptionPane.showMessageDialog(null, " Error "+e);
+}
     }
-
     @FXML
     private void event_info_vista4(MouseEvent event) {
     }

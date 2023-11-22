@@ -6,7 +6,11 @@ package controlador;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -14,13 +18,31 @@ import javafx.fxml.Initializable;
  * @author moises
  */
 public class Info_anillosmujer3Controller implements Initializable {
+Stage stage;
 
+    public void setStage(Stage stage) {
+
+        this.stage = stage;
+    }
+    
+    @FXML
+    private ComboBox<String> combo_talla;
+    @FXML
+    private ComboBox<String> combo_cantidad;
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        combo_cantidad.getItems().addAll("1", "2", "3", "4");
+        combo_talla.getItems().addAll("1", "2", "3", "4", "5");
     }    
+
+    @FXML
+    private void event_volver(MouseEvent event) {
+        stage.close();
+    }
+    
     
 }
