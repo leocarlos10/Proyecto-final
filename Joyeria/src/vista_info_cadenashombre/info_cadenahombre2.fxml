@@ -16,7 +16,7 @@
          <children>
             <ImageView fitHeight="259.0" fitWidth="236.0" layoutX="126.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagenes/cadena%20hombre%201.jpg" />
+                  <Image url="@../imagenes/cadena%20hombre%202.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1.0" layoutY="1.0" onMouseClicked="#event_volver" pickOnBounds="true" preserveRatio="true" rotate="180.0">
@@ -26,12 +26,12 @@
             </ImageView>
             <Pane layoutX="457.0" layoutY="37.0" prefHeight="209.0" prefWidth="342.0">
                <children>
-                  <Label layoutX="50.0" layoutY="15.0" prefHeight="41.0" prefWidth="281.0" text="Cadena Plateada" textFill="#fcf7f7" wrapText="true">
+                  <Label layoutX="50.0" layoutY="15.0" prefHeight="41.0" prefWidth="281.0" text="Cadena Plateada Ancha" textFill="#fcf7f7" wrapText="true">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="50.0" layoutY="51.0" prefHeight="30.0" prefWidth="152.0" text="\$ 10.000 COP" textFill="#fffbfb">
+                  <Label layoutX="50.0" layoutY="51.0" prefHeight="30.0" prefWidth="152.0" text="\$ 50.000 COP" textFill="#fffbfb">
                      <font>
                         <Font size="20.0" />
                      </font>

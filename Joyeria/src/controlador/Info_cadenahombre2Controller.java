@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -18,6 +19,13 @@ import javafx.scene.input.MouseEvent;
  */
 public class Info_cadenahombre2Controller implements Initializable {
 
+    Stage stage;
+
+    public void setStage(Stage stage) {
+
+        this.stage = stage;
+    }
+    
     @FXML
     private ComboBox<String> combo_talla;
     @FXML
@@ -28,11 +36,13 @@ public class Info_cadenahombre2Controller implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO0
+        combo_cantidad.getItems().addAll("1", "2", "3", "4");
+        combo_talla.getItems().addAll("1", "2", "3", "4", "5");
     }    
 
     @FXML
     private void event_volver(MouseEvent event) {
+        stage.close();
     }
     
 }
