@@ -28,7 +28,7 @@ public class Info_cadenahombre2Controller implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        // TODO0
     }    
 
     @FXML
