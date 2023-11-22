@@ -15,10 +15,10 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author moises
+ * @author USUARIO
  */
-public class Info_anillosmujer3Controller implements Initializable {
-    
+public class Info_anillomujer4Controller implements Initializable {
+
     Stage stage;
 
     public void setStage(Stage stage) {

@@ -19,18 +19,17 @@ import javafx.stage.Stage;
  */
 public class Info_anillomujer2Controller implements Initializable {
 
-     Stage stage;
+    Stage stage;
 
     public void setStage(Stage stage) {
 
         this.stage = stage;
     }
-    
+
     @FXML
     private ComboBox<String> combo_talla;
     @FXML
     private ComboBox<String> combo_cantidad;
-    
 
     /**
      * Initializes the controller class.
@@ -39,11 +38,11 @@ public class Info_anillomujer2Controller implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         combo_cantidad.getItems().addAll("1", "2", "3", "4");
         combo_talla.getItems().addAll("1", "2", "3", "4", "5");
-    }    
+    }
 
     @FXML
     private void event_volver(MouseEvent event) {
         stage.close();
     }
-    
+
 }

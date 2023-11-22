@@ -10,7 +10,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import controlador.controller_principal;
-import javafx.stage.StageStyle;
 /**
  *
  * @author Leocarlos
