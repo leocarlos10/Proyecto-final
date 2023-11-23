@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="393.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.InicioSesionController">
+<AnchorPane id="AnchorPane" prefHeight="393.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.InicioSesionController">
    <children>
       <Pane layoutX="14.0" layoutY="14.0">
          <children>
@@ -32,7 +32,7 @@
                               <Insets bottom="50.0" left="170.0" right="170.0" />
                            </VBox.margin>
                         </Pane>
-                        <TextField fx:id="correo" promptText="Email" style="-fx-background-color: black;">
+                        <TextField fx:id="correo" promptText="Email" style="-fx-background-color: black; -fx-text-fill: white;">
                            <VBox.margin>
                               <Insets left="70.0" right="70.0" />
                            </VBox.margin>
@@ -42,7 +42,7 @@
                               <Insets bottom="25.0" left="70.0" right="70.0" />
                            </VBox.margin>
                         </Separator>
-                        <PasswordField fx:id="pass" promptText="Contraseña" style="-fx-background-color: #000000;">
+                        <PasswordField fx:id="pass" promptText="Contraseña" style="-fx-background-color: #000000; -fx-text-fill: white;">
                            <VBox.margin>
                               <Insets left="70.0" right="70.0" />
                            </VBox.margin>
