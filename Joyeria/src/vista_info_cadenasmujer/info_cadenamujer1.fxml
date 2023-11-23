@@ -42,7 +42,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="50.0" layoutY="149.0" prefHeight="17.0" prefWidth="57.0" text="1 Anillo" textFill="#fcf7f7">
+                  <Label layoutX="50.0" layoutY="149.0" prefHeight="17.0" prefWidth="57.0" text="1 Cadena" textFill="#fcf7f7">
                      <font>
                         <Font size="14.0" />
                      </font>

@@ -17,7 +17,7 @@ import javafx.stage.Stage;
  *
  * @author moises
  */
-public class Info_cadenamujer2Controller implements Initializable {
+public class Info_cadenamujer4Controller implements Initializable {
 Stage stage;
 
     public void setStage(Stage stage) {
@@ -34,14 +34,13 @@ Stage stage;
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
         combo_cantidad.getItems().addAll("1", "2", "3", "4");
         combo_talla.getItems().addAll("1", "2", "3", "4", "5");
     }    
 
     @FXML
     private void event_volver(MouseEvent event) {
-         stage.close();
+        stage.close();
     }
     
 }

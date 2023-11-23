@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Info_cadenahombre3Controller">
+<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Info_cadenahombre3Controller">
    <children>
       <Pane layoutY="121.0" prefHeight="393.0" prefWidth="862.0" style="-fx-background-color: black;">
          <children>
@@ -42,7 +42,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="50.0" layoutY="149.0" prefHeight="17.0" prefWidth="57.0" text="1 Anillo" textFill="#fcf7f7">
+                  <Label layoutX="50.0" layoutY="149.0" prefHeight="17.0" prefWidth="57.0" text="1 Cadena" textFill="#fcf7f7">
                      <font>
                         <Font size="14.0" />
                      </font>
