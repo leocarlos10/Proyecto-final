@@ -87,18 +87,18 @@ public class Crear_cuentaController implements Initializable {
     
     public void volver(){
         
-         try{
-        // primero cambia la scene 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/principal.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        // luego devuelve el stage(la ventana raiz).
-        controller_principal controller = loader.getController();
-        controller.setStage(stage); 
-        }catch(Exception e){
-            
-            JOptionPane.showMessageDialog(null, "Error al cambiar al principal "+e);
+        try {
+            // primero cambia la scene 
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/principal.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            // luego devuelve el stage(la ventana raiz).
+            controller_principal controller = loader.getController();
+            controller.setStage(stage);
+        } catch (Exception e) {
+
+            JOptionPane.showMessageDialog(null, "Error al cambiar al principal " + e);
         }
     }
 }

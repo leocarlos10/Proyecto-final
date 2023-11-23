@@ -119,7 +119,7 @@ public class controller_principal implements Initializable {
            CAnillosHombre = cargar_ventanas("/vista_catalogo/Catalogo_anilloshombre.fxml");
            CAnillosMujer = cargar_ventanas("/vista_catalogo/Catalogo_anillosmujer.fxml");
            C_Cadenashombre = cargar_ventanas("/vista_catalogo/Catalogo_cadenashombre.fxml");
-          C_Cadenasmujer = cargar_ventanas("/vista_catalogo/Catalogo_cadenasmujer.fxml");
+           C_Cadenasmujer = cargar_ventanas("/vista_catalogo/Catalogo_cadenasmujer.fxml");
            StackPane.getChildren().addAll(CPrincipal,CAnillosHombre,CAnillosMujer,C_Cadenashombre,C_Cadenasmujer);
            // controlamos la visibilidad de la vistas
            CPrincipal.setVisible(true);
@@ -204,35 +204,39 @@ public class controller_principal implements Initializable {
     public void manejo_eventos(String nombre){
     
         // con un switch de Strings hago la verificacion correspondiente
-        switch(nombre){
-            
+        switch (nombre) {
+
             case "Inicio de sesion":
                 
-                try{
-                     cambio_ventana("/vista/inicioSesion.fxml");
-                }catch(Exception e){
-                    
-                     System.out.println("Error en el cambio de la vista inciar sesion"+e);
-                }
-                break;
+                try {
+                cambio_ventana("/vista/inicioSesion.fxml");
+            } catch (Exception e) {
+
+                System.out.println("Error en el cambio de la vista inciar sesion" + e);
+            }
+            break;
 
             case "Registrarse":
-                 try{
-                     
-                     cambio_ventana("/vista/Crearcuenta.fxml");
-                     
-                }catch(Exception e){
-                    
-                  System.out.println("Error en el cambio de la vista crear cuenta"+e);
-                }
-                break;
+                 try {
+
+                cambio_ventana("/vista/Crearcuenta.fxml");
+
+            } catch (Exception e) {
+
+                System.out.println("Error en el cambio de la vista crear cuenta" + e);
+            }
+            break;
 
             case "Historial de compra":
-                JOptionPane.showMessageDialog(null, "Evento generado para el Historial de compra");
-                break;
+                   try {
+                      cambio_ventana("/vista/historial_compra.fxml");
+                   } catch (Exception e) {
+                       System.out.println("Error en el cambio de ventana historial de compra "+e);
+                   }
+                  break;
 
             case "Anillos de hombre":
-                
+
                 CPrincipal.setVisible(false);
                 CAnillosHombre.setVisible(true);
                 CAnillosMujer.setVisible(false);
@@ -241,7 +245,7 @@ public class controller_principal implements Initializable {
                 break;
 
             case "Anillos de mujer":
-                
+
                 CPrincipal.setVisible(false);
                 CAnillosHombre.setVisible(false);
                 CAnillosMujer.setVisible(true);
@@ -250,7 +254,7 @@ public class controller_principal implements Initializable {
                 break;
 
             case "Cadenas de hombre":
-                
+
                 CPrincipal.setVisible(false);
                 CAnillosHombre.setVisible(false);
                 CAnillosMujer.setVisible(false);
@@ -265,11 +269,11 @@ public class controller_principal implements Initializable {
                 C_Cadenashombre.setVisible(false);
                 C_Cadenasmujer.setVisible(true);
                 break;
-                
+
             case "cerrar sesion":
                 label_email_ususario.setText("");
                 break;
-                
+
             default:
                 break;
         }
@@ -314,6 +318,14 @@ public class controller_principal implements Initializable {
             stage.setScene(scene);
             FavoritosController controlador = loader.getController();
             controlador.setStage(stage);
+        }else if(url.equals("/vista/historial_compra.fxml")){
+             FXMLLoader loader = new FXMLLoader(getClass().getResource(url));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            Historial_compraController controlador = loader.getController();
+            controlador.setStage(stage);
+            
         }
     }
     

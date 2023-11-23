@@ -14,7 +14,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -25,22 +24,33 @@ import javax.swing.JOptionPane;
  *
  * @author USUARIO
  */
-public class FavoritosController implements Initializable {
+public class Historial_compraController implements Initializable {
     
-     Stage stage;
-    
-    public void setStage(Stage stage1){
-        stage=stage1;
+    Stage stage;
+   
+
+    public void setStage(Stage stage) {
+
+        this.stage = stage;
     }
 
     @FXML
     private Label label_precio;
+    
+    @FXML
+    private ImageView event_volver;
+    
     @FXML
     private TableView<?> tabla;
+    
     @FXML
     private TableColumn<?, ?> col_nombre;
+    
     @FXML
     private TableColumn<?, ?> col_precio;
+    
+    @FXML
+    private TableColumn<?, ?> col_correo_usuario;
 
     /**
      * Initializes the controller class.
@@ -53,14 +63,13 @@ public class FavoritosController implements Initializable {
     @FXML
     private void event_volver(MouseEvent event) {
         try {
-            // primero cambia la scene 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/principal.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             stage.setScene(scene);
-            // luego devuelve el stage(la ventana raiz).
             controller_principal controller = loader.getController();
             controller.setStage(stage);
+
         } catch (Exception e) {
 
             JOptionPane.showMessageDialog(null, "Error al cambiar al principal " + e);

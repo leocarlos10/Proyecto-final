@@ -65,17 +65,17 @@ public class CarritoController implements Initializable {
     @FXML
     void event_volver(MouseEvent event) {
         
-        try{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/principal.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        controller_principal controller = loader.getController();
-        controller.setStage(stage); 
-        
-        }catch(Exception e){
-            
-            JOptionPane.showMessageDialog(null, "Error al cambiar al principal "+e);
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/principal.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            controller_principal controller = loader.getController();
+            controller.setStage(stage);
+
+        } catch (Exception e) {
+
+            JOptionPane.showMessageDialog(null, "Error al cambiar al principal " + e);
         }
     }
 
