@@ -70,7 +70,7 @@ public class controller_principal implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         
         // cargamos en una lista los nombres de categorias y opciones
-        String []opciones ={"Inicio de sesion","Registrarse","Historial de compra"};
+        String []opciones ={"Inicio de sesion","Registrarse","Historial de compra","cerrar sesion"};
         String[] categorias = { "Anillos de hombre","Anillos de mujer","Cadenas de hombre","Cadenas de mujer"};
         MenuItem item_opciones;
         MenuItem item_categorias;
@@ -264,6 +264,10 @@ public class controller_principal implements Initializable {
                 CAnillosMujer.setVisible(false);
                 C_Cadenashombre.setVisible(false);
                 C_Cadenasmujer.setVisible(true);
+                break;
+                
+            case "cerrar sesion":
+                label_email_ususario.setText("");
                 break;
                 
             default:

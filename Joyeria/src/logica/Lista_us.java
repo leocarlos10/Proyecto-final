@@ -125,7 +125,7 @@ public class Lista_us {
         
         // utilizamos la clase FileWriter para poder escribir en el fichero los datos de los usuarios
         FileWriter escritura = new FileWriter(
-                "/Users/moises/Documents/Proyecto-final/Joyeria/src/Archivos/ListaUsuarios.txt",
+                "C:/Users/USUARIO/OneDrive/Documentos/NetBeansProjects/Proyecto_final_Joyeria/Joyeria/src/Archivos/ListaUsuarios.txt",
                 true);
         // recorremos la lista para guardar en el fichero el usuario agregado.
         if(cab!= null){
@@ -144,7 +144,7 @@ public class Lista_us {
         
        try{
       
-           File archivo = new File("/Users/moises/Documents/Proyecto-final/Joyeria/src/Archivos/ListaUsuarios.txt");
+           File archivo = new File("C:/Users/USUARIO/OneDrive/Documentos/NetBeansProjects/Proyecto_final_Joyeria/Joyeria/src/Archivos/ListaUsuarios.txt");
            Scanner scanner = new Scanner(archivo);
            nodo_usuario user = null;
            String atributo = "";
