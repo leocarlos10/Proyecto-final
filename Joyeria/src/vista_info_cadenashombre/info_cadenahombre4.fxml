@@ -10,13 +10,13 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Info_cadenahombre2Controller">
+<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Info_cadenahombre4Controller">
    <children>
       <Pane layoutY="121.0" prefHeight="393.0" prefWidth="862.0" style="-fx-background-color: black;">
          <children>
-            <ImageView fitHeight="259.0" fitWidth="236.0" layoutX="126.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="259.0" fitWidth="236.0" layoutX="175.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagenes/cadena%20hombre%202.jpg" />
+                  <Image url="@../imagenes/cadena%20hombre%204.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1.0" layoutY="1.0" onMouseClicked="#event_volver" pickOnBounds="true" preserveRatio="true" rotate="180.0">
@@ -26,12 +26,12 @@
             </ImageView>
             <Pane layoutX="457.0" layoutY="37.0" prefHeight="209.0" prefWidth="342.0">
                <children>
-                  <Label layoutX="50.0" layoutY="15.0" prefHeight="41.0" prefWidth="281.0" text="Cadena Plateada Ancha" textFill="#fcf7f7" wrapText="true">
+                  <Label layoutX="50.0" layoutY="15.0" prefHeight="41.0" prefWidth="281.0" text="Cadena Tipo 3" textFill="#fcf7f7" wrapText="true">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="50.0" layoutY="51.0" prefHeight="30.0" prefWidth="152.0" text="\$ 50.000 COP" textFill="#fffbfb">
+                  <Label layoutX="50.0" layoutY="51.0" prefHeight="30.0" prefWidth="152.0" text="\$ 40.000 COP" textFill="#fffbfb">
                      <font>
                         <Font size="20.0" />
                      </font>

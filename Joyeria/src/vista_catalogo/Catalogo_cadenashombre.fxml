@@ -21,7 +21,7 @@
                   <Image url="@../imagenes/cadena%20hombre%201.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="109.0" fitWidth="134.0" layoutX="178.0" layoutY="217.0" onMouseClicked="#event_info_vista3" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="109.0" fitWidth="134.0" layoutX="192.0" layoutY="217.0" onMouseClicked="#event_info_vista3" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagenes/cadena%20hombre%203.jpg" />
                </image>
