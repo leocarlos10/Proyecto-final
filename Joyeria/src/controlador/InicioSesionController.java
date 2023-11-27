@@ -17,7 +17,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
-import logica.Lista_us;
+import Logica_usuarios.Lista_us;
 
 /**
  * FXML Controller class

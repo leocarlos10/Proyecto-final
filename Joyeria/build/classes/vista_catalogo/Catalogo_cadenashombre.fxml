@@ -51,7 +51,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="178.0" layoutY="328.0" prefHeight="21.0" prefWidth="137.0" text="Cadena Enlazada" textFill="#f8f5f5">
+            <Label layoutX="178.0" layoutY="328.0" prefHeight="21.0" prefWidth="137.0" text="Cadena Doble " textFill="#f8f5f5">
                <font>
                   <Font size="15.0" />
                </font>
@@ -61,7 +61,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="489.0" layoutY="328.0" prefHeight="21.0" prefWidth="137.0" text="Cadena Doble " textFill="#f8f5f5">
+            <Label layoutX="489.0" layoutY="328.0" prefHeight="21.0" prefWidth="137.0" text="Cadena Enlazada" textFill="#f8f5f5">
                <font>
                   <Font size="15.0" />
                </font>
