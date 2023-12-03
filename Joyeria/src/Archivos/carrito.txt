@@ -1,19 +1,4 @@
-2Anillo Negro
-$ 115.000 COP
-5
-1
-Anillo Natural black
-$ 200.000 COP
-3
-1
-Anillo Personalizado
-$ 130.000 COP
-4
-4
-Anillo chains wolfei
-$ 150.000 COP
-1
-2
+
 Anillo Negro
 $ 115.000 COP
 null
@@ -22,3 +7,11 @@ Anillo Natural black
 $ 200.000 COP
 null
 null
+Anillo chains wolfei
+$ 150.000 COP
+null
+null
+Anillo Personalizado
+$ 130.000 COP
+1
+2

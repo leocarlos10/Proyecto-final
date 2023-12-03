@@ -59,10 +59,19 @@ public class CarritoController implements Initializable {
         
         // obtenemos los datos de el fichero carrito
         p.getP_carrito();
+        // si la pila esta vacia quiere decir que no hay productos agregados al carrito
+        if(!p.pila.isEmpty()){
         // obtenemos el primer objeto de la pila
         Producto pro = p.pila.pop();
         // mandamos el objeto para que se precargen los datos ala vista.
         setInfoCarrito(pro);
+        }else{
+            
+            // hacemos que el textPane no sea editable y le mandamos el texto carrito vacio.
+            text_info.setEditable(false);
+            text_info.setText("Carrito vacio ");
+            
+        }
      
     }
     
@@ -127,6 +136,24 @@ public class CarritoController implements Initializable {
     @FXML
     private void event_anterior(ActionEvent event) {
         
+        if(!p.pila.isEmpty()){
+            
+        // obtenemos la pos del objeto en la base
+        int pos = p.pila.size()-1;
+        // obtenemos el objeto
+        Producto pro = p.pila.get(pos);
+        // lo mostramos en el carrito
+        setInfoCarrito(pro); 
+        // eliminamos el producto ya mostrado
+        p.pila.remove(pos);
+        }else{
+            
+            p.aviso_info("Informacion", "Ya te encuentras en el tope de los productos agregados al carrito");
+            // traemos los datos del fichero carrito para preparar el boton anterior
+            p.getP_carrito();
+            
+        }
+        
     }
 
     @FXML
@@ -135,8 +162,14 @@ public class CarritoController implements Initializable {
         if (!p.pila.isEmpty()) {
             Producto pro = p.pila.pop();
             setInfoCarrito(pro);
+           
         } else {
             p.aviso_info("Informacion", "Ya no hay mas productos en el carrito");
+            // traemos los datos del fichero carrito para preparar el boton anterior
+            p.getP_carrito();
+            // eliminamos el producto repetido
+            p.pila.remove(0);
+            
         }
     }
 
