@@ -31,7 +31,7 @@
                   <Image url="@../imagenes/AnilloNegro4.jpeg" />
                </image>
             </ImageView>
-            <Label layoutX="183.0" layoutY="153.0" prefHeight="17.0" prefWidth="98.0" text="Anillo negro" textFill="#f8f5f5">
+            <Label layoutX="183.0" layoutY="153.0" prefHeight="17.0" prefWidth="98.0" text="Anillo Negro" textFill="#f8f5f5">
                <font>
                   <Font size="15.0" />
                </font>

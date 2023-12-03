@@ -13,10 +13,14 @@ public class Producto {
     private String nombre;
     private String precio;
     private String emailUs;
+    private String talla;
+    private String cantidad;
 
-    public Producto(String nombre, String precio) {
+    public Producto(String nombre, String precio, String talla, String cantidad) {
         this.nombre = nombre;
         this.precio = precio;
+        this.talla = talla;
+        this.cantidad = cantidad;
     }
 
     public String getNombre() {
@@ -35,6 +39,22 @@ public class Producto {
         this.precio = precio;
     }
 
+    public String getTalla() {
+        return talla;
+    }
+
+    public void setTalla(String talla) {
+        this.talla = talla;
+    }
+
+    public String getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(String cantidad) {
+        this.cantidad = cantidad;
+    }
+
     public String getEmailUs() {
         return emailUs;
     }
@@ -45,6 +65,6 @@ public class Producto {
     
     public String escribir(){
         
-        return nombre+"\n"+precio+"\n";
+        return nombre+"\n"+precio+"\n"+talla+"\n"+cantidad+"\n";
     }
 }

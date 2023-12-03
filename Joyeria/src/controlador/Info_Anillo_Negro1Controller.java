@@ -26,7 +26,7 @@ public class Info_Anillo_Negro1Controller implements Initializable {
    Stage stage;
    Pila_Producto p = new Pila_Producto();
    
-    
+   
    public void setStage(Stage stage){
        
        this.stage=stage;
@@ -40,6 +40,10 @@ public class Info_Anillo_Negro1Controller implements Initializable {
 
     @FXML
     private Label nombre_producto;
+    
+    @FXML
+    private Label precio_producto;
+
 
     @FXML
     void event_volver(MouseEvent event) {
@@ -58,11 +62,12 @@ public class Info_Anillo_Negro1Controller implements Initializable {
     @FXML
     private void event_agregar_carrito(ActionEvent event) {
         
-        // primero cargamos la info de los productos en la pila
-        p.getInfo_Productos();
-        // luego recorremos la lista para buscar el producto el cual se va agregar al fichero carrito
-        Producto pro = p.getProduto(nombre_producto.getText());
-        if (pro != null) {
+        // primero creamos el objeto
+        Producto pro = new Producto(
+                nombre_producto.getText(),
+                precio_producto.getText(),
+                combo_talla.getValue(),
+                combo_cantidad.getValue());
 
             // lo guardamos en le fichero.
             try {
@@ -70,9 +75,6 @@ public class Info_Anillo_Negro1Controller implements Initializable {
             } catch (Exception e) {
                 System.out.println("no se pudo guardar el producto en el carrito.");
             }
-        } else {
-            System.out.println("El producto no se pudo agregar al carrito");
-        }
         
         p.aviso_info("INFO", "Producto agregado al carrito");
     }

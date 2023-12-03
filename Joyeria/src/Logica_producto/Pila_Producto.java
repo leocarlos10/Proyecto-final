@@ -15,7 +15,7 @@ import javafx.scene.control.TextInputDialog;
 
 /**
  *
- * @author USUARIO
+ * @author Caleb, Moises, Leocarlos
  */
 public class Pila_Producto {
     
@@ -42,18 +42,20 @@ public class Pila_Producto {
         
     }
     
-    public void getInfo_Productos(){
+     public void getP_carrito(){
         
        try{
       
-           File archivo = new File("C:/Users/USUARIO/OneDrive/Documentos/NetBeansProjects/Proyecto_final_Joyeria/Joyeria/src/Archivos/Productos.txt");
+           File archivo = new File("C:/Users/USUARIO/OneDrive/Documentos/NetBeansProjects/Proyecto_final_Joyeria/Joyeria/src/Archivos/carrito.txt");
            Scanner scanner = new Scanner(archivo);
            Producto pro=null;
            String atributo="";
           // atributos para poder instanciar el objeto pelicula
           String nombre="";
           String precio="";
-           
+          String talla="";
+          String cantidad="";
+          
            // utilizo este arrayList para poder capturar la informacion del fichero.
            List<String> info = new ArrayList<>();
           
@@ -66,13 +68,15 @@ public class Pila_Producto {
             }
             
            // ahora recorremos la lista de info para poder crear los objetos y guardarlos en la pila
-           for(int i=0;i<info.size();i+=2){
+           for(int i=0;i<info.size();i+=4){
               
                if (!info.isEmpty()) {
                    nombre = info.get(i);
                    precio = info.get(i+1);
+                   talla = info.get(i+2);
+                   cantidad = info.get(i+3);
                    // creamos el objeto
-                   pro = new Producto(nombre,precio); 
+                   pro = new Producto(nombre,precio,talla,cantidad); 
                    // por ultimo lo agregamos a la pila
                    pila.push(pro);
                }
@@ -95,6 +99,17 @@ public class Pila_Producto {
         }
         
         return null;
+    }
+    
+    public void mostrar(){
+        
+        for(Producto i : pila){
+            
+            System.out.println(i.getNombre());
+            System.out.println(i.getPrecio());
+            System.out.println(i.getTalla());
+            System.out.println(i.getCantidad());
+        }
     }
     
     // metodo general para mostrar avisos de informacion

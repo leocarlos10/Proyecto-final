@@ -31,7 +31,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="50.0" layoutY="44.0" prefHeight="30.0" prefWidth="152.0" text="\$ 130.000 COP" textFill="#fffbfb">
+                  <Label fx:id="precio_producto" layoutX="50.0" layoutY="44.0" prefHeight="30.0" prefWidth="152.0" text="\$ 130.000 COP" textFill="#fffbfb">
                      <font>
                         <Font size="20.0" />
                      </font>
