@@ -42,11 +42,73 @@ public class Pila_Producto {
         
     }
     
+    // agregar en la clase cola
+     public void guardar_P_favoritos(Producto p) throws Exception {
+        
+        // utilizamos la clase FileWriter para poder escribir en el fichero 
+        FileWriter escritura = new FileWriter(
+                "C:/Users/USUARIO/OneDrive/Documentos/NetBeansProjects/Proyecto_final_Joyeria/Joyeria/src/Archivos/favoritos.txt",
+                true);
+        escritura.write(p.escribir());
+        escritura.close();
+        
+    }
+    
+     
      public void getP_carrito(){
         
        try{
       
            File archivo = new File("C:/Users/USUARIO/OneDrive/Documentos/NetBeansProjects/Proyecto_final_Joyeria/Joyeria/src/Archivos/carrito.txt");
+           Scanner scanner = new Scanner(archivo);
+           Producto pro=null;
+           String atributo="";
+          // atributos para poder instanciar el objeto pelicula
+          String nombre="";
+          String precio="";
+          String talla="";
+          String cantidad="";
+          
+           // utilizo este arrayList para poder capturar la informacion del fichero.
+           List<String> info = new ArrayList<>();
+          
+           // recorro el fichero para ir guardando cada atributo en la lista
+           while (scanner.hasNextLine()) {
+                atributo = scanner.nextLine();
+                // con esto evitamos que nos traiga un valor vacio.
+                if(!atributo.equalsIgnoreCase(""))
+                    info.add(atributo);
+            }
+            
+           // ahora recorremos la lista de info para poder crear los objetos y guardarlos en la pila
+           for(int i=0;i<info.size();i+=4){
+              
+               if (!info.isEmpty()) {
+                   nombre = info.get(i);
+                   precio = info.get(i+1);
+                   talla = info.get(i+2);
+                   cantidad = info.get(i+3);
+                   // creamos el objeto
+                   pro = new Producto(nombre,precio,talla,cantidad); 
+                   // por ultimo lo agregamos a la pila
+                   pila.push(pro);
+               }
+           }
+           // cerramos el flujo.
+            scanner.close();
+       
+       }catch(Exception e){
+           
+           aviso_Error("Error al traer los datos del fichero, por favor revise la ruta del fichero", ""+e);
+       }
+    }
+     
+     // agregar en la clase cola
+      public void get_P_favoritos(){
+        
+       try{
+      
+           File archivo = new File("C:/Users/USUARIO/OneDrive/Documentos/NetBeansProjects/Proyecto_final_Joyeria/Joyeria/src/Archivos/favoritos.txt");
            Scanner scanner = new Scanner(archivo);
            Producto pro=null;
            String atributo="";

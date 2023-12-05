@@ -4,6 +4,7 @@
  */
 package controlador;
 
+import Logica_producto.Producto;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -36,18 +37,18 @@ public class FavoritosController implements Initializable {
     @FXML
     private Label label_precio;
     @FXML
-    private TableView<?> tabla;
+    private TableView<Producto> tabla;
     @FXML
-    private TableColumn<?, ?> col_nombre;
+    private TableColumn col_nombre;
     @FXML
-    private TableColumn<?, ?> col_precio;
+    private TableColumn col_precio;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
     }    
 
     @FXML

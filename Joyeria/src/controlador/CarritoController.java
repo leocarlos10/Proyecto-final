@@ -95,24 +95,71 @@ public class CarritoController implements Initializable {
     public void setInfoCarrito(Producto p) {
         
         if (p.getNombre().equalsIgnoreCase("Anillo Negro")) {
-            
+
             // cargamos la info
             setCargarInfo("/imagenes/AnilloNegro1.jpeg", p);
-            
+
         } else if (p.getNombre().equalsIgnoreCase("Anillo Natural black")) {
-             // cargamos la info
-            setCargarInfo("/imagenes/Anillo2.jpeg",p);
-           
-            
+            // cargamos la info
+            setCargarInfo("/imagenes/Anillo2.jpeg", p);
+
         } else if (p.getNombre().equalsIgnoreCase("Anillo chains wolfei")) {
             // cargamos la info
-            setCargarInfo("/imagenes/AnilloNegro3.jpeg",p);
-            
+            setCargarInfo("/imagenes/AnilloNegro3.jpeg", p);
+
         } else if (p.getNombre().equalsIgnoreCase("Anillo Personalizado")) {
             // cargamos la info
-          setCargarInfo("/imagenes/AnilloNegro4.jpeg",p);
+            setCargarInfo("/imagenes/AnilloNegro4.jpeg", p);
+
+        } else if (p.getNombre().equalsIgnoreCase("Paquete gótico")) {
+            // cargamos la info
+            setCargarInfo("/imagenes/anillomujer1.jpeg", p);
+
+        } else if (p.getNombre().equalsIgnoreCase("Minimalista oro 18k")) {
+            // cargamos la info
+            setCargarInfo("/imagenes/anillomujer2.jpeg", p);
+
+        } else if (p.getNombre().equalsIgnoreCase("Trebol rubí oro 9k")) {
+            // cargamos la info
+            setCargarInfo("/imagenes/anillomujer3.jpeg", p);
+
+        } else if (p.getNombre().equalsIgnoreCase("Oro blanco 14k elegante")) {
+            // cargamos la info
+            setCargarInfo("/imagenes/anillomujer4.jpeg", p);
+
+        } else if (p.getNombre().equalsIgnoreCase("Cadena plateada")) {
+            // cargamos la info
+            setCargarInfo("/imagenes/cadena hombre 1.jpeg", p);
+
+        } else if (p.getNombre().equalsIgnoreCase("Cadena Aplastada ")) {
+            // cargamos la info
+            setCargarInfo("/imagenes/cadena hombre 2.jpeg", p);
+
+        } else if (p.getNombre().equalsIgnoreCase("Cadena Doble ")) {
+            // cargamos la info
+            setCargarInfo("/imagenes/cadena hombre 3.jpeg", p);
+
+        } else if (p.getNombre().equalsIgnoreCase("Cadena Enlazada ")) {
+            // cargamos la info
+            setCargarInfo("/imagenes/cadena hombre 4.jpeg", p);
+
+        } else if (p.getNombre().equalsIgnoreCase("Cadena accesorio corazón")) {
+            // cargamos la info
+          setCargarInfo("/imagenes/cadena 1.jpeg",p);
            
-        }
+        } else if (p.getNombre().equalsIgnoreCase("Cadena accesorio gota de agua")) {
+            // cargamos la info
+          setCargarInfo("/imagenes/cadena 2.jpeg",p);
+           
+        } else if (p.getNombre().equalsIgnoreCase("Cadena accesorio rubí")) {
+            // cargamos la info
+          setCargarInfo("/imagenes/cadena 3.jpeg",p);
+           
+        } else if (p.getNombre().equalsIgnoreCase("Cadena accesorio diamante")) {
+            // cargamos la info
+          setCargarInfo("/imagenes/cadena 4.jpeg",p);
+           
+        } 
     }
     
     public void setCargarInfo(String url, Producto p){

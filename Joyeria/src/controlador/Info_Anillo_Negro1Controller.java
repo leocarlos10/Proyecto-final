@@ -85,5 +85,22 @@ public class Info_Anillo_Negro1Controller implements Initializable {
 
     @FXML
     private void event_agregar_favoritos(ActionEvent event) {
+        
+         // primero creamos el objeto
+        Producto pro = new Producto(
+                nombre_producto.getText(),
+                precio_producto.getText(),
+                combo_talla.getValue(),
+                combo_cantidad.getValue());
+
+            // lo guardamos en le fichero.
+            try {
+                p.guardar_P_favoritos(pro);
+            } catch (Exception e) {
+                System.out.println("no se pudo guardar el producto en favoritos.");
+            }
+        
+        p.aviso_info("INFO", "Producto agregado a favoritos");
+        
     }
 }
