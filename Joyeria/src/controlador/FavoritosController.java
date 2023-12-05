@@ -57,7 +57,11 @@ public class FavoritosController implements Initializable {
         
         // primero que todo debemos traer toda la informacion de el fichero favoritos
         listaP.get_P_favoritos();
-        setLLenarTableView();
+        if (!(listaP.cab == null)) {
+
+            setLLenarTableView();
+        }
+
         
     }    
 
