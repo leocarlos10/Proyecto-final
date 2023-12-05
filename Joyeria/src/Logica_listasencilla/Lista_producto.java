@@ -82,7 +82,7 @@ public class Lista_producto {
         
         // utilizamos la clase FileWriter para poder escribir en el fichero 
         FileWriter escritura = new FileWriter(
-                "C:/Users/USUARIO/OneDrive/Documentos/NetBeansProjects/Proyecto_final_Joyeria/Joyeria/src/Archivos/favoritos.txt",
+                "src/Archivos/favoritos.txt",
                 true);
         escritura.write(p.escribir());
         escritura.close();
@@ -94,7 +94,7 @@ public class Lista_producto {
         
        try{
       
-           File archivo = new File("C:/Users/USUARIO/OneDrive/Documentos/NetBeansProjects/Proyecto_final_Joyeria/Joyeria/src/Archivos/favoritos.txt");
+           File archivo = new File("src/Archivos/favoritos.txt");
            Scanner scanner = new Scanner(archivo);
            nodo_producto pro=null;
            String atributo="";
