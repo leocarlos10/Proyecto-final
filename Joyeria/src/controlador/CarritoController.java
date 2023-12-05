@@ -4,8 +4,8 @@
  */
 package controlador;
 
-import Logica_producto.Pila_Producto;
-import Logica_producto.Producto;
+import Logica_Pila.Pila_Producto;
+import Logica_Pila.Producto;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;

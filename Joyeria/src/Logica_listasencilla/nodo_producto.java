@@ -2,25 +2,27 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Logica_producto;
+package Logica_listasencilla;
+
+import Logica_Pila.*;
 
 /**
  *
  * @author Caleb, Moises , Leocarlos
  */
-public class Producto {
+public class nodo_producto {
     
     private String nombre;
     private String precio;
     private String emailUs;
     private String talla;
     private String cantidad;
+    public nodo_producto sig;
+    
 
-    public Producto(String nombre, String precio, String talla, String cantidad) {
+    public nodo_producto(String nombre, String precio) {
         this.nombre = nombre;
         this.precio = precio;
-        this.talla = talla;
-        this.cantidad = cantidad;
     }
 
     public String getNombre() {
@@ -65,6 +67,6 @@ public class Producto {
     
     public String escribir(){
         
-        return nombre+"\n"+precio+"\n"+talla+"\n"+cantidad+"\n";
+        return nombre+"\n"+precio+"\n";
     }
 }
