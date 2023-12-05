@@ -9,3 +9,8 @@ Joyeria/src/.DS_Store
 .DS_Store
 /Joyeria/build/
 /Joyeria/nbproject/private/
+
+build/built-jar.properties
+nbproject/private/private.properties
+nbproject/project.properties
+
