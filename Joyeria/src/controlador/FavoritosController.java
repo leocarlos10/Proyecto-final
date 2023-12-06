@@ -11,6 +11,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -35,6 +36,9 @@ public class FavoritosController implements Initializable {
     
      Stage stage;
      Lista_producto listaP = new Lista_producto();
+     
+    @FXML
+    private ImageView event_volver;
     
     public void setStage(Stage stage1){
         stage=stage1;
@@ -61,8 +65,6 @@ public class FavoritosController implements Initializable {
 
             setLLenarTableView();
         }
-
-        
     }    
 
     @FXML
@@ -105,6 +107,20 @@ public class FavoritosController implements Initializable {
        }
         // al terminar el de agregar las peliculas en la lista modelo se cargan en el tableView
         tabla.setItems(lista); 
+    }
+
+    @FXML
+    private void event_eliminarp(ActionEvent event) {
+        
+        nodo_producto pro = tabla.getSelectionModel().getSelectedItem();
+        if(!(pro==null)){
+            listaP.eliminar_producto(pro);
+        setLLenarTableView();
+        }else{
+            
+            listaP.aviso_info("INFO","Por favor seleccione un elemento de la tabla");
+        }
+        
     }
     
 }

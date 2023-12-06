@@ -124,17 +124,7 @@ public class cola_producto {
         alerta.show();
     }
     
-    public void mostrar(){
-        
-        nodo_producto p=inicio;
-        
-            do{
-                    System.out.println(p.getNombre());
-                    System.out.println(p.getPrecio());
-                    System.out.println(p.getEmailUs());
-                    p=p.sig;
-            }while(p!=inicio);
-    }
+   
     
      public String getEmail(){
          

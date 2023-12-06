@@ -20,3 +20,9 @@ moises@gmail.com
 Cadena Tipo 3
 $ 40.000 COP
 moises@gmail.com
+Cadena accesorio corazón
+$ 99000 COP
+moises@gmail.com
+Cadena con gota de agua
+$ 139000 COP
+moises@gmail.com

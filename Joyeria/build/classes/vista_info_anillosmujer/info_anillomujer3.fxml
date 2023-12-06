@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Info_anillosmujer3Controller">
+<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Info_anillosmujer3Controller">
    <children>
       <Pane layoutY="121.0" prefHeight="393.0" prefWidth="862.0" style="-fx-background-color: black;">
          <children>
@@ -60,11 +60,7 @@
             <ComboBox fx:id="combo_cantidad" layoutX="500.0" layoutY="321.0" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: black;" />
             <Label layoutX="476.0" layoutY="325.0" text="Cantidad" textFill="#fcf6f6" />
             <Button layoutX="550.0" layoutY="308.0" mnemonicParsing="false" onAction="#event_agregar_carrito" prefHeight="41.0" prefWidth="137.0" style="-fx-background-color: orange;" text="Agregar al carrito" textFill="#f8f5f5" />
-<<<<<<< HEAD
             <Button layoutX="696.0" layoutY="308.0" mnemonicParsing="false" onAction="#event_comprar_ahora" prefHeight="41.0" prefWidth="137.0" style="-fx-background-color: green;" text="Comprar ahora" textFill="#f8f1f1" />
-=======
-            <Button layoutX="696.0" layoutY="308.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="137.0" style="-fx-background-color: green;" text="Comprar ahora" textFill="#f8f1f1" />
->>>>>>> f48c6d6fb5fcdb4f06c4a65bd595b68c1d49c26a
             <Button layoutX="689.0" layoutY="255.0" mnemonicParsing="false" onAction="#event_agregar_favoritos" prefHeight="30.0" prefWidth="145.0" style="-fx-background-color: F65B74;" text="Agregar a favoritos" textFill="#f5f3f3" />
          </children>
       </Pane>

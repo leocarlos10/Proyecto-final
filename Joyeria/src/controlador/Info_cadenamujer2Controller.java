@@ -85,6 +85,28 @@ public class Info_cadenamujer2Controller implements Initializable {
 
     @FXML
     private void event_comprar_ahora(ActionEvent event) {
+        
+         String email = colaP.getEmail();
+        if (!email.equals("")) {
+            nodo_producto pro = new nodo_producto(
+                    nombre_producto.getText(),
+                    precio_producto.getText());
+            // recuperamos el email del usuario para instanciarlo en el objeto
+            pro.setEmailUs(email);
+
+            try {
+                colaP.guardar_P_Historial(pro);
+            } catch (Exception e) {
+                System.out.println("no se pudo guardar el producto en el carrito.");
+            }
+
+            p.aviso_info("INFO", "Compra Exitosa");
+        }else{
+            
+            listaP.aviso_info("INFO", """
+                                      ACCION INVALIDA
+                                      Por favor antes realizar la compra inicie sesion""");
+        }
     }
 
     @FXML

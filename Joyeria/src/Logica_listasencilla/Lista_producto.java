@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Scanner;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextInputDialog;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -22,6 +23,22 @@ public class Lista_producto {
      public nodo_producto cab;
     
     public Lista_producto() { cab = null; }
+    
+     public nodo_producto getBuscarCod(String nombre){
+        
+         if(cab==null)
+            return null;
+        else{
+            nodo_producto p = cab;
+            while(p!=null){
+                if((p.getNombre()).equals(nombre))
+                    return p;
+                else
+                    p=p.sig;  //Avanza un posición en la lista
+            }
+            return null;
+        }
+    }
     
        public nodo_producto getCrearNodo(
             String nombre,
@@ -133,20 +150,98 @@ public class Lista_producto {
        }
     }
       
-      public void mostrar() {
-          
-          if(cab != null){
-              
-              nodo_producto p = cab;
-              
-              while(p!=null){
-                  
-                  System.out.println(p.getNombre());
-                  System.out.println(p.getPrecio());
-                  p = p.sig;
-              }
-          }
-
+       public void eliminar_fichero(){
+        
+         File ruta = new File("src/Archivos/favoritos.txt");
+        
+         // este condicional es para verificar si se borro correctamente o no el fichero
+        if(ruta.delete()){
+            
+            System.out.println("archivo borrado");
+        } else{
+            System.out.println("el archivo no se pudo borrar");
+        }
+    }
+    
+    public void eliminar_producto(nodo_producto pro){
+        // primero que todo elimino el fichero
+        eliminar_fichero();
+        // luego debemos eliminar el producto de la cola
+        nodo_producto p=cab;
+        
+        while(p!=null){
+            
+            if(p.getNombre().equals(pro.getNombre()))
+                setElimPnombre(pro.getNombre());
+            
+            p=p.sig;
+        }
+        
+         nodo_producto q=cab;
+        // por ultimo recorremos la lista guardando los datos del fichero de nuevo
+         while(q!=null){
+             
+             try {
+                 guardar_P_favoritos(q);
+             } catch (Exception e) {
+                 System.out.println("error al guardar en el fichero favoritos "+e);
+             }
+            q=q.sig;
+        }
+    }
+    
+     public boolean getEsVacia(){
+        return cab==null;
+    }
+     
+      public nodo_producto getAnterior(nodo_producto actual){
+        nodo_producto anterior=null;
+        if(getEsVacia())
+            return null;
+        else{
+            anterior=cab;
+            while(anterior.sig!=actual)
+                anterior=anterior.sig;
+            return anterior;
+        }
+    }
+    
+     public void setElimPnombre(String nombre){
+         
+        if(getEsVacia()){
+            System.out.println("La lista no tiene elementos!");
+        }else{
+            nodo_producto p, q, anterior=null;            
+            p=getBuscarCod(nombre);
+            if(p==null)
+                System.out.println("El código buscado para eliminar NO"
+                + " se encuentra registrado!");
+            else{
+                if((p==cab)&&(cab.sig==null)){
+                    cab=null;
+                    System.out.println("Elemento eliminado, la lista esta vacía!");
+                }
+                else if((p==cab)&&(cab.sig!=null)){
+                    cab=cab.sig;
+                    p.sig=null;
+                    p=null;
+                    System.out.println("Elemento eliminado, en el inicio de la lista!");
+                }
+                else if(p.sig==null){
+                    anterior=getAnterior(p);
+                    anterior.sig=null;
+                    p=null;
+                    System.out.println("Elemento eliminado, al final de la"
+                    + " lista!");
+                }else{                    
+                    anterior=getAnterior(p);
+                    anterior.sig=p.sig;
+                    p.sig=null;
+                    p=null;
+                    System.out.println("Elemento eliminado!");
+                }
+            }
+        }
     }
 
      // metodo general para mostrar avisos de informacion

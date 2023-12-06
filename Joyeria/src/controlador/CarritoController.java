@@ -33,6 +33,7 @@ public class CarritoController implements Initializable {
     
     Stage stage;
     Pila_Producto p = new Pila_Producto();
+    
     @FXML
     private ImageView event_volver;
     @FXML
