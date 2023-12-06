@@ -17,7 +17,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-
+import Logica_cola.cola_producto;
 /**
  * FXML Controller class
  *
@@ -28,6 +28,7 @@ public class Info_Anillo_Negro1Controller implements Initializable {
    Stage stage;
    Pila_Producto p = new Pila_Producto();
    Lista_producto listaP = new Lista_producto();
+   cola_producto colaP = new cola_producto();
    
    
    public void setStage(Stage stage){
@@ -84,6 +85,28 @@ public class Info_Anillo_Negro1Controller implements Initializable {
 
     @FXML
     private void event_comprar_ahora(ActionEvent event) {
+        
+        String email = colaP.getEmail();
+        if (!email.equals("")) {
+            nodo_producto pro = new nodo_producto(
+                    nombre_producto.getText(),
+                    precio_producto.getText());
+            // recuperamos el email del usuario para instanciarlo en el objeto
+            pro.setEmailUs(email);
+
+            try {
+                colaP.guardar_P_Historial(pro);
+            } catch (Exception e) {
+                System.out.println("no se pudo guardar el producto en el carrito.");
+            }
+
+            p.aviso_info("INFO", "Compra Exitosa");
+        }else{
+            
+            listaP.aviso_info("INFO", """
+                                      ACCION INVALIDA
+                                      Por favor antes realizar la compra inicie sesion""");
+        }
     }
 
     @FXML

@@ -5,6 +5,7 @@
 package controlador;
 
 
+import Logica_listasencilla.Lista_us;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -38,6 +39,7 @@ public class controller_principal implements Initializable {
     
     
     Stage stage;
+    Lista_us listaP = new Lista_us();
     // con este metodo seteamos el stage desde el Main esto con el fin de poder manejar la scene en el stage(La ventana raiz)
     public void setStage(Stage stage1){
         
@@ -136,8 +138,16 @@ public class controller_principal implements Initializable {
     
     // metodo para setear el email del usuario que ha iniciado sesion
      public void setEmail(String email){
-         
-        label_email_ususario.setText(email); 
+        // mandamos el nombre del usuario al label
+        label_email_ususario.setText(email);
+        // luego lo guardamos en el fichero
+         try {
+              listaP.usuario_inicio_sesion(email); 
+         } catch (Exception e) {
+             System.out.println("No se puedo guardar el usuario en el fichero "+e);
+         }
+       
+        
     }
     
     // eventos 
@@ -271,7 +281,15 @@ public class controller_principal implements Initializable {
                 break;
 
             case "cerrar sesion":
+                // limpiamos el label
                 label_email_ususario.setText("");
+                // borramos el fichero con el usuario
+                try {
+                     listaP.cerrarsesion();
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+               
                 break;
 
             default:

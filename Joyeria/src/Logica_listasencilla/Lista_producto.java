@@ -77,7 +77,7 @@ public class Lista_producto {
         return band;
     }
     
-     // agregar en la clase lista sencilla
+     
      public void guardar_P_favoritos(nodo_producto p) throws Exception {
         
         // utilizamos la clase FileWriter para poder escribir en el fichero 
@@ -89,7 +89,7 @@ public class Lista_producto {
         
     }
      
-      // agregar en la clase cola
+     
       public void get_P_favoritos(){
         
        try{
