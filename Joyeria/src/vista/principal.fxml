@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitMenuButton?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -31,12 +30,6 @@
             <Image url="@../imagenes/account%20image.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="717.0" layoutY="13.0" onMouseClicked="#event_mostrar_text_buscar" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../imagenes/buscar.png" />
-         </image>
-      </ImageView>
-      <TextField fx:id="text_buscar" layoutX="565.0" layoutY="12.0" onKeyPressed="#event_Enter" promptText="Buscar" visible="false" />
       <SplitMenuButton fx:id="Menu_categorias" layoutX="71.0" layoutY="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Categorias" />
       <SplitMenuButton fx:id="menu_opciones" layoutX="796.0" layoutY="13.0" mnemonicParsing="false" opacity="0.0" prefHeight="31.0" prefWidth="39.0" />
       <StackPane fx:id="StackPane" layoutY="88.0" prefHeight="393.0" prefWidth="862.0" />

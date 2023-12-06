@@ -57,9 +57,6 @@ public class controller_principal implements Initializable {
      
      HBox CPrincipal,CAnillosHombre,CAnillosMujer,C_Cadenashombre,C_Cadenasmujer;
     
-    @FXML
-    private TextField text_buscar;
-    
      @FXML
     private SplitMenuButton Menu_categorias;
 
@@ -151,32 +148,6 @@ public class controller_principal implements Initializable {
     }
     
     // eventos 
-    
-    // con este evento manejo la visibilidad del TexField buscar
-    @FXML
-    void event_mostrar_text_buscar(MouseEvent event) {
-       
-        if(estado_textbuscar){
-            text_buscar.setVisible(false);
-            estado_textbuscar=false;
-        }else{
-            text_buscar.setVisible(true);
-            estado_textbuscar=true;
-        }
-    }
-    
-    // cuando el usuario le de enter para buscar se borre lo que esta y se oculte el textfield
-    // ademas de buscar y mostrar los datos del producto necesario.
-    @FXML
-    void event_Enter(KeyEvent event) {
-        // con este condicional verifico que el evento se accione solo cuando se presione la tecla enter
-        if(event.getCode() == KeyCode.ENTER){
-            text_buscar.setText("");
-            text_buscar.setVisible(false);
-        }
-        // agregar el codigo para que muestre la venta del producto buscado
-    }
-    
     @FXML
     void event_volver_pri(MouseEvent event) {
         
