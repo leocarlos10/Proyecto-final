@@ -26,12 +26,12 @@
             </ImageView>
             <Pane layoutX="457.0" layoutY="37.0" prefHeight="209.0" prefWidth="342.0">
                <children>
-                  <Label layoutX="50.0" layoutY="15.0" prefHeight="41.0" prefWidth="281.0" text="Anillo minimalista de oro 18k" textFill="#fcf7f7" wrapText="true">
+                  <Label fx:id="nombre_producto" layoutX="50.0" layoutY="15.0" prefHeight="41.0" prefWidth="281.0" text="Anillo minimalista de oro 18k" textFill="#fcf7f7" wrapText="true">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="50.0" layoutY="51.0" prefHeight="30.0" prefWidth="152.0" text="\$ 699000 COP" textFill="#fffbfb">
+                  <Label fx:id="precio_producto" layoutX="50.0" layoutY="51.0" prefHeight="30.0" prefWidth="152.0" text="\$ 699000 COP" textFill="#fffbfb">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -59,9 +59,9 @@
             <Label layoutX="513.0" layoutY="259.0" text="Talla" textFill="#f8f5f5" />
             <ComboBox fx:id="combo_cantidad" layoutX="500.0" layoutY="321.0" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: black;" />
             <Label layoutX="476.0" layoutY="325.0" text="Cantidad" textFill="#fcf6f6" />
-            <Button layoutX="550.0" layoutY="310.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="138.0" style="-fx-background-color: orange;" text="Agregar al carrito" textFill="#f8f5f5" />
-            <Button layoutX="698.0" layoutY="310.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="131.0" style="-fx-background-color: green;" text="Comprar ahora" textFill="#f8f1f1" />
-            <Button layoutX="680.0" layoutY="247.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="146.0" style="-fx-background-color: F65B74;" text="Agregar a favoritos" textFill="#f5f3f3" />
+            <Button layoutX="550.0" layoutY="310.0" mnemonicParsing="false" onAction="#event_agregar_carrito" prefHeight="41.0" prefWidth="138.0" style="-fx-background-color: orange;" text="Agregar al carrito" textFill="#f8f5f5" />
+            <Button layoutX="698.0" layoutY="310.0" mnemonicParsing="false" onAction="#event_comprar_ahora" prefHeight="41.0" prefWidth="131.0" style="-fx-background-color: green;" text="Comprar ahora" textFill="#f8f1f1" />
+            <Button layoutX="680.0" layoutY="247.0" mnemonicParsing="false" onAction="#event_agregar_favoritos" prefHeight="41.0" prefWidth="146.0" style="-fx-background-color: F65B74;" text="Agregar a favoritos" textFill="#f5f3f3" />
          </children>
       </Pane>
    </children>

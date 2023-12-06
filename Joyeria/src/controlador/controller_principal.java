@@ -193,7 +193,7 @@ public class controller_principal implements Initializable {
         try {
               cambio_ventana("/vista/Carrito.fxml");
          } catch (Exception e) {
-             JOptionPane.showMessageDialog(null, "ERROR en el cambio de ventana "+e);
+             System.out.println( "ERROR en el cambio de ventana "+e);
          }
         
     }

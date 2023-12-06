@@ -26,12 +26,12 @@
             </ImageView>
             <Pane layoutX="457.0" layoutY="37.0" prefHeight="209.0" prefWidth="342.0">
                <children>
-                  <Label layoutX="50.0" layoutY="15.0" prefHeight="41.0" prefWidth="281.0" text="Cadena dorada con rubí " textFill="#fcf7f7" wrapText="true">
+                  <Label fx:id="nombre_producto" layoutX="50.0" layoutY="15.0" prefHeight="41.0" prefWidth="281.0" text="Cadena dorada con rubí " textFill="#fcf7f7" wrapText="true">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="50.0" layoutY="51.0" prefHeight="30.0" prefWidth="152.0" text="\$ 169000 COP" textFill="#fffbfb">
+                  <Label fx:id="precio_producto" layoutX="50.0" layoutY="51.0" prefHeight="30.0" prefWidth="152.0" text="\$ 169000 COP" textFill="#fffbfb">
                      <font>
                         <Font size="20.0" />
                      </font>

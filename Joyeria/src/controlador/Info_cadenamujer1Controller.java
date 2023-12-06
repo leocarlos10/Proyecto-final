@@ -6,6 +6,7 @@ package controlador;
 
 import Logica_Pila.Pila_Producto;
 import Logica_Pila.Producto;
+import Logica_cola.cola_producto;
 import Logica_listasencilla.Lista_producto;
 import Logica_listasencilla.nodo_producto;
 import java.net.URL;
@@ -29,6 +30,7 @@ public class Info_cadenamujer1Controller implements Initializable {
 
     Pila_Producto p = new Pila_Producto();
     Lista_producto listaP = new Lista_producto();
+    cola_producto colaP = new cola_producto();
 
     public void setStage(Stage stage) {
 

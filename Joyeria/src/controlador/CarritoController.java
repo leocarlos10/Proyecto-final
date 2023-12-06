@@ -33,6 +33,10 @@ public class CarritoController implements Initializable {
     
     Stage stage;
     Pila_Producto p = new Pila_Producto();
+    @FXML
+    private ImageView event_volver;
+    @FXML
+    private Button btn_eliminarPro;
    
     
     public void setStage(Stage stage1){
@@ -71,6 +75,7 @@ public class CarritoController implements Initializable {
      
     }
     
+    @FXML
     void event_volver(MouseEvent event) {
         
         try {
@@ -106,53 +111,53 @@ public class CarritoController implements Initializable {
             // cargamos la info
             setCargarInfo("/imagenes/AnilloNegro4.jpeg", p);
 
-        } else if (p.getNombre().equalsIgnoreCase("Paquete gótico")) {
+        } else if (p.getNombre().equalsIgnoreCase("Paquete de anillos estilo gótico")) {
             // cargamos la info
-            setCargarInfo("/imagenes/anillomujer1.jpeg", p);
+            setCargarInfo("/imagenes/anillomujer1.jpg", p);
 
-        } else if (p.getNombre().equalsIgnoreCase("Minimalista oro 18k")) {
+        } else if (p.getNombre().equalsIgnoreCase("Anillo minimalista de oro 18k")) {
             // cargamos la info
-            setCargarInfo("/imagenes/anillomujer2.jpeg", p);
+            setCargarInfo("/imagenes/anillomujer2.jpg", p);
 
-        } else if (p.getNombre().equalsIgnoreCase("Trebol rubí oro 9k")) {
+        } else if (p.getNombre().equalsIgnoreCase("Anillo de oro 9k con rubíes")) {
             // cargamos la info
-            setCargarInfo("/imagenes/anillomujer3.jpeg", p);
+            setCargarInfo("/imagenes/anillomujer3.jpg", p);
 
-        } else if (p.getNombre().equalsIgnoreCase("Oro blanco 14k elegante")) {
+        } else if (p.getNombre().equalsIgnoreCase("Anillo elegante de oro blanco ")) {
             // cargamos la info
-            setCargarInfo("/imagenes/anillomujer4.jpeg", p);
+            setCargarInfo("/imagenes/anillomujer4.jpg", p);
 
         } else if (p.getNombre().equalsIgnoreCase("Cadena plateada")) {
             // cargamos la info
-            setCargarInfo("/imagenes/cadena hombre 1.jpeg", p);
+            setCargarInfo("/imagenes/cadena hombre 1.jpg", p);
 
-        } else if (p.getNombre().equalsIgnoreCase("Cadena Aplastada ")) {
+        } else if (p.getNombre().equalsIgnoreCase("Cadena Plateada Ancha")) {
             // cargamos la info
-            setCargarInfo("/imagenes/cadena hombre 2.jpeg", p);
+            setCargarInfo("/imagenes/cadena hombre 2.jpg", p);
 
         } else if (p.getNombre().equalsIgnoreCase("Cadena Doble ")) {
             // cargamos la info
-            setCargarInfo("/imagenes/cadena hombre 3.jpeg", p);
+            setCargarInfo("/imagenes/cadena hombre 3.jpg", p);
 
-        } else if (p.getNombre().equalsIgnoreCase("Cadena Enlazada ")) {
+        } else if (p.getNombre().equalsIgnoreCase("Cadena Tipo 3")) {
             // cargamos la info
-            setCargarInfo("/imagenes/cadena hombre 4.jpeg", p);
+            setCargarInfo("/imagenes/cadena hombre 4.jpg", p);
 
         } else if (p.getNombre().equalsIgnoreCase("Cadena accesorio corazón")) {
             // cargamos la info
-          setCargarInfo("/imagenes/cadena 1.jpeg",p);
+          setCargarInfo("/imagenes/cadena 1.jpg",p);
            
-        } else if (p.getNombre().equalsIgnoreCase("Cadena accesorio gota de agua")) {
+        } else if (p.getNombre().equalsIgnoreCase("Cadena con gota de agua")) {
             // cargamos la info
-          setCargarInfo("/imagenes/cadena 2.jpeg",p);
+          setCargarInfo("/imagenes/cadena 2.jpg",p);
            
-        } else if (p.getNombre().equalsIgnoreCase("Cadena accesorio rubí")) {
+        } else if (p.getNombre().equalsIgnoreCase("Cadena dorada con rubí ")) {
             // cargamos la info
-          setCargarInfo("/imagenes/cadena 3.jpeg",p);
+          setCargarInfo("/imagenes/cadena 3.jpg",p);
            
         } else if (p.getNombre().equalsIgnoreCase("Cadena accesorio diamante")) {
             // cargamos la info
-          setCargarInfo("/imagenes/cadena 4.jpeg",p);
+          setCargarInfo("/imagenes/cadena 4.jpg",p);
            
         } 
     }
@@ -172,6 +177,7 @@ public class CarritoController implements Initializable {
     }
 
 
+    @FXML
     private void event_anterior(ActionEvent event) {
         
         if(!p.pila.isEmpty()){
@@ -194,6 +200,7 @@ public class CarritoController implements Initializable {
         
     }
 
+    @FXML
     private void event_siguiente(ActionEvent event) {
        
         if (!p.pila.isEmpty()) {
@@ -208,6 +215,10 @@ public class CarritoController implements Initializable {
             p.pila.remove(0);
             
         }
+    }
+
+    @FXML
+    private void event_eliminarProducto(ActionEvent event) {
     }
 
 }

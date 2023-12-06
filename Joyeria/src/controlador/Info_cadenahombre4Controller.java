@@ -6,6 +6,7 @@ package controlador;
 
 import Logica_Pila.Pila_Producto;
 import Logica_Pila.Producto;
+import Logica_cola.cola_producto;
 import Logica_listasencilla.Lista_producto;
 import Logica_listasencilla.nodo_producto;
 import java.net.URL;
@@ -28,6 +29,7 @@ public class Info_cadenahombre4Controller implements Initializable {
     Stage stage;
     Pila_Producto p = new Pila_Producto();
    Lista_producto listaP = new Lista_producto();
+   cola_producto colaP = new cola_producto();
     @FXML
     private Label nombre_producto;
     @FXML
@@ -87,6 +89,32 @@ public class Info_cadenahombre4Controller implements Initializable {
             }
         
         p.aviso_info("INFO", "Producto agregado a favoritos");
+    }
+
+    @FXML
+    private void event_comprar_ahora(ActionEvent event) {
+        
+         String email = colaP.getEmail();
+        if (!email.equals("")) {
+            nodo_producto pro = new nodo_producto(
+                    nombre_producto.getText(),
+                    precio_producto.getText());
+            // recuperamos el email del usuario para instanciarlo en el objeto
+            pro.setEmailUs(email);
+
+            try {
+                colaP.guardar_P_Historial(pro);
+            } catch (Exception e) {
+                System.out.println("no se pudo guardar el producto en el carrito.");
+            }
+
+            p.aviso_info("INFO", "Compra Exitosa");
+        }else{
+            
+            listaP.aviso_info("INFO", """
+                                      ACCION INVALIDA
+                                      Por favor antes realizar la compra inicie sesion""");
+        }
     }
     
 }
