@@ -19,7 +19,7 @@
             <Separator layoutX="56.0" layoutY="278.0" prefHeight="3.0" prefWidth="747.0" />
             <TextArea fx:id="text_info" layoutX="325.0" layoutY="72.0" prefHeight="158.0" prefWidth="475.0" promptText="carrito vacio" />
             <Label fx:id="label_precio" layoutX="425.0" layoutY="292.0" prefHeight="17.0" prefWidth="88.0" textFill="#fffefe" />
-            <Label layoutX="689.0" layoutY="309.0" prefHeight="20.0" prefWidth="114.0" text="Proceder al pago" textFill="#fcf9f9">
+            <Label layoutX="689.0" layoutY="283.0" prefHeight="20.0" prefWidth="114.0" text="Proceder al pago" textFill="#fcf9f9">
                <font>
                   <Font size="14.0" />
                </font>
