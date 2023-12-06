@@ -92,7 +92,7 @@ public class Pila_Producto {
 
     public Producto getProduto(String nombre) {
 
-        for (Producto i : pila) {
+         for (Producto i : pila) {
 
             if (i.getNombre().equalsIgnoreCase(nombre)) {
                 return i;
