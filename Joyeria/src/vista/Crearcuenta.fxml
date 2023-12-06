@@ -16,20 +16,20 @@
    <children>
       <Pane layoutX="14.0" layoutY="14.0">
          <children>
-            <HBox alignment="CENTER" layoutX="-8.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="366.0" prefWidth="833.0" style="-fx-background-color: black;">
+            <HBox alignment="CENTER" layoutX="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="366.0" prefWidth="833.0" style="-fx-background-color: black;">
                <children>
                   <VBox alignment="CENTER" prefHeight="366.0" prefWidth="472.0">
                      <children>
-                        <Pane prefHeight="131.0" prefWidth="37.0" style="-fx-background-color: F0DBB0;">
+                        <Pane prefHeight="121.0" prefWidth="118.0" style="-fx-background-color: F0DBB0;">
                            <children>
-                              <ImageView fitHeight="120.0" fitWidth="132.0" layoutX="8.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="104.0" fitWidth="106.0" layoutX="4.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../imagenes/account%20image.png" />
                                  </image>
                               </ImageView>
                            </children>
                            <VBox.margin>
-                              <Insets bottom="50.0" left="170.0" right="155.0" />
+                              <Insets bottom="50.0" left="180.0" right="180.0" />
                            </VBox.margin>
                         </Pane>
                         <TextField fx:id="correo" promptText="Email" style="-fx-background-color: black; -fx-text-fill: white;">
@@ -52,7 +52,7 @@
                               <Insets left="80.0" right="80.0" />
                            </VBox.margin>
                         </Separator>
-                        <Button mnemonicParsing="false" onAction="#event_registrar" prefHeight="38.0" prefWidth="313.0" style="-fx-background-color: F0DBB0;" text="Registrarse">
+                        <Button mnemonicParsing="false" onAction="#event_registrar" prefHeight="20.0" prefWidth="150.0" style="-fx-background-color: F0DBB0;" text="Registrarse">
                            <VBox.margin>
                               <Insets top="20.0" />
                            </VBox.margin>
@@ -64,7 +64,7 @@
                   </VBox>
                </children>
             </HBox>
-            <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#event_volver" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="-1.0" onMouseClicked="#event_volver" pickOnBounds="true" preserveRatio="true" rotate="180.0">
                <image>
                   <Image url="@../imagenes/Arrow%20White%20Png.jpeg" />
                </image>

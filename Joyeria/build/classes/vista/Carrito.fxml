@@ -14,12 +14,12 @@
    <children>
       <Pane layoutY="89.0" prefHeight="393.0" prefWidth="862.0" style="-fx-background-color: black;">
          <children>
-            <ImageView fx:id="imagen" fitHeight="133.0" fitWidth="185.0" layoutX="65.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" />
-            <Separator layoutX="56.0" layoutY="53.0" prefHeight="1.0" prefWidth="590.0" />
-            <Separator layoutX="56.0" layoutY="278.0" prefHeight="3.0" prefWidth="590.0" />
-            <TextArea fx:id="text_info" layoutX="273.0" layoutY="72.0" prefHeight="158.0" prefWidth="289.0" promptText="carrito vacio" />
+            <ImageView fx:id="imagen" fitHeight="133.0" fitWidth="185.0" layoutX="123.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" />
+            <Separator layoutX="56.0" layoutY="53.0" prefHeight="3.0" prefWidth="747.0" />
+            <Separator layoutX="56.0" layoutY="278.0" prefHeight="3.0" prefWidth="747.0" />
+            <TextArea fx:id="text_info" layoutX="325.0" layoutY="72.0" prefHeight="158.0" prefWidth="475.0" promptText="carrito vacio" />
             <Label fx:id="label_precio" layoutX="425.0" layoutY="292.0" prefHeight="17.0" prefWidth="88.0" textFill="#fffefe" />
-            <Label layoutX="534.0" layoutY="292.0" prefHeight="20.0" prefWidth="114.0" text="Proceder al pago" textFill="#fcf9f9">
+            <Label layoutX="689.0" layoutY="309.0" prefHeight="20.0" prefWidth="114.0" text="Proceder al pago" textFill="#fcf9f9">
                <font>
                   <Font size="14.0" />
                </font>
@@ -29,17 +29,17 @@
                   <Image url="@../imagenes/Arrow%20White%20Png.jpeg" />
                </image>
             </ImageView>
-            <Button fx:id="btn_eliminarPro" layoutX="273.0" layoutY="246.0" mnemonicParsing="false" onAction="#event_eliminarProducto" prefHeight="27.0" prefWidth="121.0" style="-fx-background-color: #000000;" text="Eliminar Producto" textFill="#f5f2f2">
+            <Button fx:id="btn_eliminarPro" layoutX="392.0" layoutY="246.0" mnemonicParsing="false" onAction="#event_eliminarProducto" prefHeight="27.0" prefWidth="121.0" style="-fx-background-color: #000000;" text="Eliminar Producto" textFill="#f5f2f2">
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
-            <Button layoutX="423.0" layoutY="246.0" mnemonicParsing="false" onAction="#event_anterior" prefHeight="27.0" prefWidth="70.0" style="-fx-background-color: #000000;" text="Anterior" textFill="#fffdfd">
+            <Button layoutX="600.0" layoutY="246.0" mnemonicParsing="false" onAction="#event_anterior" prefHeight="27.0" prefWidth="70.0" style="-fx-background-color: #000000;" text="Anterior" textFill="#fffdfd">
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
-            <Button layoutX="514.0" layoutY="246.0" mnemonicParsing="false" onAction="#event_siguiente" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: #000000;" text="Siguiente" textFill="#f8f7f7">
+            <Button layoutX="724.0" layoutY="246.0" mnemonicParsing="false" onAction="#event_siguiente" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: #000000;" text="Siguiente" textFill="#f8f7f7">
                <font>
                   <Font size="13.0" />
                </font>
