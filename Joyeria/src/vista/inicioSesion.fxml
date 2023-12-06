@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="393.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.InicioSesionController">
+<AnchorPane id="AnchorPane" prefHeight="393.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.InicioSesionController">
    <children>
       <Pane layoutX="14.0" layoutY="14.0">
          <children>
@@ -20,9 +20,9 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="221.0" prefWidth="408.0">
                      <children>
-                        <Pane prefHeight="87.0" prefWidth="408.0" style="-fx-background-color: F0DBB0;">
+                        <Pane prefHeight="71.0" prefWidth="54.0" style="-fx-background-color: F0DBB0;">
                            <children>
-                              <ImageView fitHeight="87.0" fitWidth="83.0" layoutX="-7.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="59.0" fitWidth="60.0" layoutX="5.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../imagenes/candado%20incio%20sesion.png" />
                                  </image>
@@ -52,7 +52,7 @@
                               <Insets left="70.0" right="70.0" />
                            </VBox.margin>
                         </Separator>
-                        <Button mnemonicParsing="false" onAction="#event_ingresar" style="-fx-background-color: F0DBB0;" text="ingresar">
+                        <Button mnemonicParsing="false" onAction="#event_ingresar" prefHeight="34.0" prefWidth="279.0" style="-fx-background-color: F0DBB0;" text="ingresar">
                            <VBox.margin>
                               <Insets top="20.0" />
                            </VBox.margin>
@@ -64,7 +64,7 @@
                   </VBox>
                </children>
             </HBox>
-            <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#event_volver" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+            <ImageView fitHeight="30.0" fitWidth="49.0" layoutX="19.0" layoutY="7.0" onMouseClicked="#event_volver" pickOnBounds="true" preserveRatio="true" rotate="180.0">
                <image>
                   <Image url="@../imagenes/Arrow%20White%20Png.jpeg" />
                </image>

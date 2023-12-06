@@ -11,62 +11,62 @@
    <children>
       <AnchorPane id="AnchorPane" prefHeight="393.0" prefWidth="862.0" style="-fx-background-color: black;">
          <children>
-            <ImageView fitHeight="121.0" fitWidth="109.0" layoutX="483.0" layoutY="28.0" onMouseClicked="#event_info_vista2" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="163.0" fitWidth="145.0" layoutX="424.0" layoutY="15.0" onMouseClicked="#event_info_vista2" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagenes/anillomujer2.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="144.0" fitWidth="98.0" layoutX="183.0" layoutY="40.0" onMouseClicked="#event_info_vista1" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="175.0" fitWidth="154.0" layoutX="35.0" layoutY="29.0" onMouseClicked="#event_info_vista1" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagenes/anillomujer1.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="109.0" fitWidth="134.0" layoutX="178.0" layoutY="217.0" onMouseClicked="#event_info_vista3" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="154.0" fitWidth="154.0" layoutX="35.0" layoutY="206.0" onMouseClicked="#event_info_vista3" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagenes/anillomujer3.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="121.0" fitWidth="98.0" layoutX="479.0" layoutY="226.0" onMouseClicked="#event_info_vista4" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="143.0" fitWidth="154.0" layoutX="418.0" layoutY="225.0" onMouseClicked="#event_info_vista4" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagenes/anillomujer4.jpg" />
                </image>
             </ImageView>
-            <Label layoutX="183.0" layoutY="144.0" prefHeight="21.0" prefWidth="109.0" text="Paquete gótico" textFill="#f8f5f5">
+            <Label layoutX="207.0" layoutY="68.0" prefHeight="21.0" prefWidth="109.0" text="Paquete gótico" textFill="#f8f5f5">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="183.0" layoutY="169.0" prefHeight="17.0" prefWidth="98.0" text="198.000 COP" textFill="#fcf7f7">
+            <Label layoutX="207.0" layoutY="112.0" prefHeight="17.0" prefWidth="98.0" text="198.000 COP" textFill="#fcf7f7">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="483.0" layoutY="153.0" prefHeight="21.0" prefWidth="137.0" text="Minimalista oro 18k" textFill="#f8f5f5">
+            <Label layoutX="606.0" layoutY="58.0" prefHeight="21.0" prefWidth="137.0" text="Minimalista oro 18k" textFill="#f8f5f5">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="477.0" layoutY="351.0" prefHeight="17.0" prefWidth="98.0" text="399.9000 COP" textFill="#fcf7f7">
+            <Label layoutX="595.0" layoutY="264.0" prefHeight="17.0" prefWidth="98.0" text="399.9000 COP" textFill="#fcf7f7">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="178.0" layoutY="328.0" prefHeight="21.0" prefWidth="137.0" text="Trebol rubí oro 9k" textFill="#f8f5f5">
+            <Label layoutX="207.0" layoutY="235.0" prefHeight="21.0" prefWidth="137.0" text="Trebol rubí oro 9k" textFill="#f8f5f5">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="178.0" layoutY="349.0" prefHeight="17.0" prefWidth="109.0" text="167.000 COP" textFill="#fcf7f7">
+            <Label layoutX="207.0" layoutY="264.0" prefHeight="17.0" prefWidth="109.0" text="167.000 COP" textFill="#fcf7f7">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="478.0" layoutY="328.0" prefHeight="21.0" prefWidth="172.0" text="Oro blanco 14k elegante" textFill="#f8f5f5">
+            <Label layoutX="589.0" layoutY="235.0" prefHeight="21.0" prefWidth="172.0" text="Oro blanco 14k elegante" textFill="#f8f5f5">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="483.0" layoutY="172.0" prefHeight="17.0" prefWidth="98.0" text="69.9000 COP" textFill="#fcf7f7">
+            <Label layoutX="606.0" layoutY="96.0" prefHeight="17.0" prefWidth="98.0" text="69.9000 COP" textFill="#fcf7f7">
                <font>
                   <Font size="15.0" />
                </font>

@@ -15,3 +15,7 @@ Anillo Personalizado
 $ 130.000 COP
 1
 2
+Anillo Negro
+$ 115.000 COP
+null
+null
