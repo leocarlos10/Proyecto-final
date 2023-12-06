@@ -60,8 +60,8 @@
             <ComboBox fx:id="combo_cantidad" layoutX="500.0" layoutY="321.0" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: black;" />
             <Label layoutX="476.0" layoutY="325.0" text="Cantidad" textFill="#fcf6f6" />
             <Button layoutX="550.0" layoutY="316.0" mnemonicParsing="false" onAction="#event_agregar_carrito" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: orange;" text="Agregar al carrito" textFill="#f8f5f5" />
-            <Button layoutX="695.0" layoutY="316.0" mnemonicParsing="false" onAction="#event_comprar_ahora" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: green;" text="Comprar ahora" textFill="#f8f1f1" />
-            <Button layoutX="662.0" layoutY="250.0" mnemonicParsing="false" onAction="#event_agregar_favoritos" prefHeight="30.0" prefWidth="152.0" style="-fx-background-color: F65B74;" text="Agregar a favoritos" textFill="#f5f3f3" />
+            <Button layoutX="695.0" layoutY="316.0" mnemonicParsing="false" onAction="#event_comprar_ahora" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: green;" text="Comprar ahora" textFill="#f8f1f1" />
+            <Button layoutX="662.0" layoutY="250.0" mnemonicParsing="false" onAction="#event_agregar_favoritos" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: F65B74;" text="Agregar a favoritos" textFill="#f5f3f3" />
          </children>
       </Pane>
    </children>

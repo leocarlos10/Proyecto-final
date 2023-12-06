@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="452.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Info_cadenamujer4Controller">
+<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="862.0" style="-fx-background-color: F0DBB0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Info_cadenamujer4Controller">
    <children>
-      <Pane layoutY="59.0" prefHeight="393.0" prefWidth="862.0" style="-fx-background-color: black;">
+      <Pane layoutY="121.0" prefHeight="393.0" prefWidth="862.0" style="-fx-background-color: black;">
          <children>
             <ImageView fitHeight="353.0" fitWidth="273.0" layoutX="153.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
