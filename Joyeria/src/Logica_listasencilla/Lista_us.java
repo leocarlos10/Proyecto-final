@@ -225,6 +225,31 @@ public class Lista_us {
         return email;
     }
     
+    // este metodo se encarga de guardar el usuario que ha iniciado sesion
+     public void usuario_inicio_sesion(String email) throws Exception {
+        
+        // utilizamos la clase FileWriter para poder escribir en el fichero 
+        FileWriter escritura = new FileWriter(
+                "src/Archivos/usuarioIniciosesion.txt",
+                true);
+        escritura.write(email);
+        escritura.close();
+        
+    }
+     
+      public void cerrarsesion() throws Exception{
+         
+         File ruta = new File("src/Archivos/usuarioIniciosesion.txt");
+        
+         // este condicional es para verificar si se borro correctamente o no el fichero
+        if(ruta.delete()){
+            
+            System.out.println("archivo borrado");
+        } else{
+            System.out.println("el archivo no se pudo borrar");
+        }
+     }
+    
      // metodo general para mostrar avisos de informacion
     public void aviso_info(String titulo, String info){
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);

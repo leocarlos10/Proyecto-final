@@ -49,10 +49,6 @@ public class CarritoController implements Initializable {
     @FXML
     private TextArea text_info;
     
-    @FXML
-    private ImageView event_volver;
-    @FXML
-    private Button btn_eliminarPro;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -75,7 +71,6 @@ public class CarritoController implements Initializable {
      
     }
     
-    @FXML
     void event_volver(MouseEvent event) {
         
         try {
@@ -176,11 +171,7 @@ public class CarritoController implements Initializable {
 
     }
 
-    @FXML
-    private void event_eliminarProducto(ActionEvent event) {
-    }
 
-    @FXML
     private void event_anterior(ActionEvent event) {
         
         if(!p.pila.isEmpty()){
@@ -203,7 +194,6 @@ public class CarritoController implements Initializable {
         
     }
 
-    @FXML
     private void event_siguiente(ActionEvent event) {
        
         if (!p.pila.isEmpty()) {

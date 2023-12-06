@@ -17,7 +17,7 @@ public class nodo_producto {
     private String emailUs;
     private String talla;
     private String cantidad;
-    public nodo_producto sig;
+    public nodo_producto ant,sig;
     
 
     public nodo_producto(String nombre, String precio) {
@@ -68,5 +68,10 @@ public class nodo_producto {
     public String escribir(){
         
         return nombre+"\n"+precio+"\n";
+    }
+    
+      public String escribir2(){
+        
+        return nombre+"\n"+precio+"\n"+emailUs+"\n";
     }
 }

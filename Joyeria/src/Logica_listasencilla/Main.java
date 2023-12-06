@@ -16,6 +16,8 @@ import controlador.controller_principal;
  */
 public class Main extends Application{
     
+    Lista_us listaP = new Lista_us();
+    
     @Override
     public void start(Stage stage) throws Exception{
         
@@ -32,6 +34,19 @@ public class Main extends Application{
     public static void main(String[] args){
         
         launch(args);
+    }
+    
+    // metodo que me ayuda a cerrar sesion en caso de que el usuario no haya cerrado sesion aun
+    @Override
+    public void stop(){
+        
+        try {
+             listaP.cerrarsesion();
+        } catch (Exception e) {
+            System.out.println("error al cerrar sesion");
+        }
+       
+    
     }
     
 }

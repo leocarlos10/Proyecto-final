@@ -4,8 +4,12 @@
  */
 package controlador;
 
+import Logica_cola.cola_producto;
+import Logica_listasencilla.nodo_producto;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,6 +18,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -27,7 +32,7 @@ import javax.swing.JOptionPane;
 public class Historial_compraController implements Initializable {
     
     Stage stage;
-   
+    cola_producto colaP = new cola_producto();
 
     public void setStage(Stage stage) {
 
@@ -41,23 +46,27 @@ public class Historial_compraController implements Initializable {
     private ImageView event_volver;
     
     @FXML
-    private TableView<?> tabla;
+    private TableView<nodo_producto> tabla;
     
     @FXML
-    private TableColumn<?, ?> col_nombre;
+    private TableColumn col_nombre;
     
     @FXML
-    private TableColumn<?, ?> col_precio;
+    private TableColumn  col_precio;
     
     @FXML
-    private TableColumn<?, ?> col_correo_usuario;
+    private TableColumn  col_correo_usuario;
 
-    /**
-     * Initializes the controller class.
-     */
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
+        colaP.get_P_historial();
+        if(!(colaP.inicio == null)){
+            
+          setLLenarTableView();
+        }
+        
     }    
 
     @FXML
@@ -76,4 +85,26 @@ public class Historial_compraController implements Initializable {
         }
     }
     
+    public void setLLenarTableView() {
+        
+        // creamos el modelo para el tableView
+        ObservableList<nodo_producto> lista = FXCollections.observableArrayList();
+        
+       // agregamos la direccion de los atributos a las columnas
+        col_nombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        col_precio.setCellValueFactory(new PropertyValueFactory<>("precio"));
+        col_correo_usuario.setCellValueFactory(new PropertyValueFactory<>("emailUs"));
+       // recorremos la lista de productos en la clase lista sencilla para agregarlos al la lista modelo
+       
+        nodo_producto p = colaP.inicio;
+
+        do {
+            
+           lista.add(p);
+            p = p.sig;
+            
+        } while (p != colaP.inicio);
+        // al terminar el de agregar las peliculas en la lista modelo se cargan en el tableView
+        tabla.setItems(lista); 
+    }
 }
