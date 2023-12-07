@@ -17,14 +17,13 @@
             <Separator layoutX="56.0" layoutY="53.0" prefHeight="3.0" prefWidth="747.0" />
             <Separator layoutX="56.0" layoutY="278.0" prefHeight="3.0" prefWidth="747.0" />
             <TextArea fx:id="text_info" layoutX="325.0" layoutY="72.0" prefHeight="158.0" prefWidth="475.0" />
-            <Label fx:id="label_precio" layoutX="425.0" layoutY="292.0" prefHeight="17.0" prefWidth="88.0" textFill="#fffefe" />
+            <Label fx:id="label_precio" layoutX="672.0" layoutY="256.0" prefHeight="17.0" prefWidth="88.0" textFill="#fffefe" />
             <Label layoutX="523.0" layoutY="255.0" prefHeight="19.0" prefWidth="137.0" text="Compra exitosa valor :" textFill="#f5f5f5">
                <font>
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label layoutX="673.0" layoutY="255.0" prefHeight="17.0" prefWidth="94.0" />
-            <Button layoutX="678.0" layoutY="288.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="107.0" style="-fx-background-color: #000000;" text="volver al Home" textFill="#fcfafa">
+            <Button layoutX="701.0" layoutY="287.0" mnemonicParsing="false" onAction="#event_volver_home" prefHeight="27.0" prefWidth="66.0" style="-fx-background-color: #000000;" text="volver " textFill="#fcfafa">
                <font>
                   <Font size="13.0" />
                </font>

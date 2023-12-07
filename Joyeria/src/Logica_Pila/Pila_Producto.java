@@ -25,6 +25,17 @@ public class Pila_Producto {
 
         pila = new Stack<>();
     }
+    
+    public Producto getProducto(String precio){
+        
+        Producto p = null;
+        for (Producto i : pila) {
+             if(i.getPrecio().equals(precio))
+                p = i;
+        }
+        
+        return p;
+    }
 
     public void setPushProducto(Producto p) {
 
@@ -102,17 +113,72 @@ public class Pila_Producto {
         return null;
     }
 
-    public void mostrar() {
+    public void eliminar_carrito() {
 
-        for (Producto i : pila) {
+        File ruta = new File("src/Archivos/carrito.txt");
 
-            System.out.println(i.getNombre());
-            System.out.println(i.getPrecio());
-            System.out.println(i.getTalla());
-            System.out.println(i.getCantidad());
+        // este condicional es para verificar si se borro correctamente o no el fichero
+        if (ruta.delete()) {
+
+            System.out.println("archivo borrado");
+        } else {
+            System.out.println("el archivo no se pudo borrar");
         }
     }
 
+    
+    public void eliminarPro(String precio){
+        
+        // primero eliminamos el fichero del carrito
+        eliminar_carrito();
+        
+        // luego eliminamos el producto de la pila
+        
+        for(Producto i: pila){
+            
+            if(i.getPrecio().equals(precio))
+                pila.remove(i);
+        }
+        
+        // posteriormente guardamos los productos restantes de nuevo en el fichero
+        for (Producto i : pila) {
+
+            try {
+                guardar_P_fichero(i);
+            } catch (Exception e) {
+                System.out.println("no se pudo guardar el producto en el fichero carrito");
+            }
+
+        }
+    }
+    
+    public void guardar_precio(String precio) throws Exception {
+        
+        // utilizamos la clase FileWriter para poder escribir en el fichero 
+        FileWriter escritura = new FileWriter(
+                "src/Archivos/precio.txt");
+        escritura.write(precio);
+        escritura.close();
+        
+    }
+    
+    public String getprecio() throws Exception{
+        
+        File archivo = new File("src/Archivos/precio.txt");
+        Scanner scanner = new Scanner(archivo);
+        String atributo = "";
+        String precio = "";
+        while (scanner.hasNextLine()) {
+            atributo = scanner.nextLine();
+            // con esto evitamos que nos traiga un valor vacio.
+            if (!atributo.equalsIgnoreCase("")) {
+                precio = atributo;
+            }
+        }
+        return precio;
+    }
+
+    
     // metodo general para mostrar avisos de informacion
     public void aviso_info(String titulo, String info) {
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);

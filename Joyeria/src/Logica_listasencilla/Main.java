@@ -42,11 +42,12 @@ public class Main extends Application{
         
         try {
              listaP.cerrarsesion();
+             listaP.usuario_inicio_sesion("");
         } catch (Exception e) {
             System.out.println("error al cerrar sesion");
         }
-       
-    
+        
+        
     }
     
 }

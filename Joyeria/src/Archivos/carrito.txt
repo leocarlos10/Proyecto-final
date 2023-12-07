@@ -1,4 +1,3 @@
-
 Anillo Negro
 $ 115.000 COP
 null
@@ -9,57 +8,5 @@ null
 null
 Anillo chains wolfei
 $ 150.000 COP
-null
-null
-Anillo Personalizado
-$ 130.000 COP
-null
-null
-Paquete de anillos estilo gótico
-$ 198000 COP
-null
-null
-Anillo minimalista de oro 18k
-$ 699000 COP
-null
-null
-Anillo de oro 9k con rubíes
-$ 167000 COP
-null
-null
-Anillo elegante de oro blanco 
-$ 3999000 COP
-null
-null
-Cadena Plateada
-$ 10.000 COP
-null
-null
-Cadena Plateada Ancha
-$ 50.000 COP
-null
-null
-Cadena Doble 
-$ 60.000 COP
-null
-null
-Cadena Tipo 3
-$ 40.000 COP
-null
-null
-Cadena accesorio corazón
-$ 99000 COP
-null
-null
-Cadena con gota de agua
-$ 139000 COP
-null
-null
-Cadena dorada con rubí 
-$ 169000 COP
-null
-null
-Cadena accesorio diamante
-$ 2699000 COP
 null
 null

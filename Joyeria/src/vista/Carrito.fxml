@@ -19,11 +19,6 @@
             <Separator layoutX="56.0" layoutY="278.0" prefHeight="3.0" prefWidth="747.0" />
             <TextArea fx:id="text_info" layoutX="325.0" layoutY="72.0" prefHeight="158.0" prefWidth="475.0" promptText="carrito vacio" />
             <Label fx:id="label_precio" layoutX="425.0" layoutY="292.0" prefHeight="17.0" prefWidth="88.0" textFill="#fffefe" />
-            <Label layoutX="689.0" layoutY="283.0" prefHeight="20.0" prefWidth="114.0" text="Proceder al pago" textFill="#fcf9f9">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
             <ImageView fx:id="event_volver" fitHeight="30.0" fitWidth="30.0" layoutX="1.0" layoutY="1.0" onMouseClicked="#event_volver" pickOnBounds="true" preserveRatio="true" rotate="180.0">
                <image>
                   <Image url="@../imagenes/Arrow%20White%20Png.jpeg" />
@@ -44,6 +39,7 @@
                   <Font size="13.0" />
                </font>
             </Button>
+            <Button layoutX="686.0" layoutY="288.0" mnemonicParsing="false" onAction="#event_proceder_pago" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #000000;" text="Proceder al pago" textFill="#f8f8f8" />
          </children>
       </Pane>
    </children>

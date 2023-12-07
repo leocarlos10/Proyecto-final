@@ -4,7 +4,6 @@
  */
 package controlador;
 
-import Logica_Pila.Producto;
 import Logica_listasencilla.Lista_producto;
 import Logica_listasencilla.nodo_producto;
 import java.net.URL;
@@ -20,7 +19,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -113,12 +111,13 @@ public class FavoritosController implements Initializable {
     private void event_eliminarp(ActionEvent event) {
         
         nodo_producto pro = tabla.getSelectionModel().getSelectedItem();
-        if(!(pro==null)){
+        
+        if (!(pro == null)) {
             listaP.eliminar_producto(pro);
-        setLLenarTableView();
-        }else{
-            
-            listaP.aviso_info("INFO","Por favor seleccione un elemento de la tabla");
+            setLLenarTableView();
+        } else {
+
+            listaP.aviso_info("INFO", "Por favor seleccione un elemento de la tabla");
         }
         
     }

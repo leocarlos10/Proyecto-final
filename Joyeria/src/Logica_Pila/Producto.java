@@ -68,4 +68,9 @@ public class Producto {
         
         return nombre+"\n"+precio+"\n"+talla+"\n"+cantidad+"\n";
     }
+    
+    public String escribir2(){
+        
+        return nombre+"\n"+precio+"\n"+emailUs+"\n";
+    }
 }

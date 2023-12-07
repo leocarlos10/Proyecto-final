@@ -6,8 +6,10 @@ package controlador;
 
 
 import Logica_listasencilla.Lista_us;
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -130,7 +132,9 @@ public class controller_principal implements Initializable {
           JOptionPane.showMessageDialog(null, "ERROR en el cambio de ventana "+e);
         }
         
-       
+       String email = getEmail();
+       if(!email.equals(""))
+           label_email_ususario.setText(email);
     }
     
     // metodo para setear el email del usuario que ha iniciado sesion
@@ -143,8 +147,33 @@ public class controller_principal implements Initializable {
          } catch (Exception e) {
              System.out.println("No se puedo guardar el usuario en el fichero "+e);
          }
+    }
+     
+      public String getEmail(){
+         
+       String correo = "";
        
-        
+       try{
+      
+           File archivo = new File("src/Archivos/usuarioIniciosesion.txt");
+           Scanner scanner = new Scanner(archivo);
+           String atributo = "";
+           
+           // recorro el fichero para ir guardando cada atributo en la lista
+           while (scanner.hasNextLine()) {
+                atributo = scanner.nextLine();
+                // con esto evitamos que nos traiga un valor vacio.
+                if(!atributo.equalsIgnoreCase(""))
+                    correo = atributo;
+            }
+           // cerramos el flujo.
+            scanner.close();
+       
+       }catch(Exception e){
+           
+           System.out.println("Error el fichero esta borrado");
+       }
+       return correo;
     }
     
     // eventos 
@@ -257,6 +286,7 @@ public class controller_principal implements Initializable {
                 // borramos el fichero con el usuario
                 try {
                      listaP.cerrarsesion();
+                     listaP.usuario_inicio_sesion("");
                 } catch (Exception e) {
                     System.out.println(e);
                 }

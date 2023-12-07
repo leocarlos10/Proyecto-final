@@ -6,6 +6,9 @@ package controlador;
 
 import Logica_Pila.Pila_Producto;
 import Logica_Pila.Producto;
+import Logica_cola.cola_producto;
+import Logica_listasencilla.Lista_producto;
+import Logica_listasencilla.nodo_producto;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,6 +25,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javax.swing.JOptionPane;
 
 /**
@@ -33,6 +37,8 @@ public class CarritoController implements Initializable {
     
     Stage stage;
     Pila_Producto p = new Pila_Producto();
+    cola_producto colaP = new cola_producto();
+    Lista_producto listaP = new Lista_producto();
     
     @FXML
     private ImageView event_volver;
@@ -220,6 +226,66 @@ public class CarritoController implements Initializable {
 
     @FXML
     private void event_eliminarProducto(ActionEvent event) {
+        
+        String precio = label_precio.getText();
+        p.eliminarPro(precio); 
+        event_siguiente(event);
+    }
+    
+    public void cambio_scene(){
+        
+         try {
+             
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista_compra/vista_compra.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(scene);
+            stage.show();
+            Vista_compraController controlador = loader.getController();
+            controlador.setStage(stage); 
+           
+            
+         } catch (Exception e) {
+             JOptionPane.showMessageDialog(null, " Error "+e);
+         }
+    }
+
+    @FXML
+    private void event_proceder_pago(ActionEvent event) {
+        
+        p.pila.clear();
+        p.getP_carrito();
+        // primero traemos los datos ala cola
+         String email = colaP.getEmail();
+         
+        if (!email.equals("")) {
+          
+            // obtenemos el objeto que se esta comprando
+           
+            Producto pro = p.getProducto(label_precio.getText());
+            // recuperamos el email del usuario para instanciarlo en el objeto
+            pro.setEmailUs(email);
+
+            // guardamos el objeto en el historial de compra.
+            try {
+                colaP.guardar_P_Historial(pro);
+                // y guardamos el precio
+                 p.guardar_precio(label_precio.getText());
+            } catch (Exception e) {
+                System.out.println("no se pudo guardar el producto en el carrito.");
+            }
+            
+            
+            // cambiamos la scene
+            cambio_scene();
+        } else {
+
+            listaP.aviso_info("INFO", """
+                                      ACCION INVALIDA
+                                      Por favor antes realizar la compra inicie sesion""");
+        }
     }
 
 }

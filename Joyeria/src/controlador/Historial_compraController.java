@@ -27,7 +27,7 @@ import javax.swing.JOptionPane;
 /**
  * FXML Controller class
  *
- * @author USUARIO
+ * @author Caleb, Moises, Leocarlos
  */
 public class Historial_compraController implements Initializable {
     
@@ -62,6 +62,7 @@ public class Historial_compraController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         
         colaP.get_P_historial();
+        
         if(!(colaP.inicio == null)){
             
           setLLenarTableView();

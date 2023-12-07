@@ -4,6 +4,7 @@
  */
 package Logica_cola;
 
+import Logica_Pila.Producto;
 import Logica_listasencilla.nodo_producto;
 import java.io.File;
 import java.io.FileWriter;
@@ -61,6 +62,17 @@ public class cola_producto {
     }
 
     public void guardar_P_Historial(nodo_producto p) throws Exception {
+
+        // utilizamos la clase FileWriter para poder escribir en el fichero 
+        FileWriter escritura = new FileWriter(
+                "src/Archivos/historialcompra.txt",
+                true);
+        escritura.write(p.escribir2());
+        escritura.close();
+
+    }
+    
+     public void guardar_P_Historial(Producto p) throws Exception {
 
         // utilizamos la clase FileWriter para poder escribir en el fichero 
         FileWriter escritura = new FileWriter(
