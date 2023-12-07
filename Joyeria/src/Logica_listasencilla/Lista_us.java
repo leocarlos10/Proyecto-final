@@ -178,7 +178,7 @@ public class Lista_us {
        
        }catch(Exception e){
            
-           aviso_Error("Error al traer los datos del fichero, por favor revise la ruta del fichero", ""+e);
+           System.out.println("Error al traer los datos del fichero, por favor revise la ruta del fichero "+e);
        }
     }
     
@@ -263,15 +263,5 @@ public class Lista_us {
         alerta.setTitle(titulo);
         alerta.setContentText(info);
         alerta.show();
-    }
-    // metodo general para captura de datos por pantalla
-     public TextInputDialog aviso_captura_informacion(String titulo, String header, String info){
-        
-        TextInputDialog dialog = new TextInputDialog();
-        dialog.setTitle(titulo);
-        dialog.setHeaderText(header);
-        dialog.setContentText(info);
-        
-        return dialog;
     }
 }

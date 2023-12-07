@@ -97,7 +97,7 @@ public class Pila_Producto {
 
         } catch (Exception e) {
 
-            aviso_Error("Error al traer los datos del fichero, por favor revise la ruta del fichero", "" + e);
+            System.out.println("Error al traer los datos del fichero, por favor revise la ruta del fichero"+ e);
         }
     }
 
@@ -134,9 +134,9 @@ public class Pila_Producto {
         
         // luego eliminamos el producto de la pila
         
-        for(Producto i: pila){
+        for(int i =0; i< pila.size();i++){
             
-            if(i.getPrecio().equals(precio))
+            if(pila.get(i).getPrecio().equals(precio))
                 pila.remove(i);
         }
         
@@ -185,24 +185,5 @@ public class Pila_Producto {
         alerta.setTitle(titulo);
         alerta.setContentText(info);
         alerta.show();
-    }
-
-    // metodo general para mostrar avisos de errores
-    public void aviso_Error(String titulo, String info) {
-        Alert alerta = new Alert(Alert.AlertType.ERROR);
-        alerta.setTitle(titulo);
-        alerta.setContentText(info);
-        alerta.show();
-    }
-
-    // metodo general para captura de datos por pantalla
-    public TextInputDialog aviso_captura_informacion(String titulo, String header, String info) {
-
-        TextInputDialog dialog = new TextInputDialog();
-        dialog.setTitle(titulo);
-        dialog.setHeaderText(header);
-        dialog.setContentText(info);
-
-        return dialog;
     }
 }

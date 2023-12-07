@@ -22,7 +22,7 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author USUARIO
+ * @author Caleb , moises , Leo 
  */
 public class Info_anillo_negro4Controller implements Initializable {
     

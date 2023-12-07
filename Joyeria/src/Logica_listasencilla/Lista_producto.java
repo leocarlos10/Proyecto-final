@@ -258,14 +258,4 @@ public class Lista_producto {
         alerta.setContentText(info);
         alerta.show();
     }
-    // metodo general para captura de datos por pantalla
-     public TextInputDialog aviso_captura_informacion(String titulo, String header, String info){
-        
-        TextInputDialog dialog = new TextInputDialog();
-        dialog.setTitle(titulo);
-        dialog.setHeaderText(header);
-        dialog.setContentText(info);
-        
-        return dialog;
-    }
 }

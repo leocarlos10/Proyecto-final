@@ -95,7 +95,7 @@ public class CarritoController implements Initializable {
 
         } catch (Exception e) {
 
-            JOptionPane.showMessageDialog(null, "Error al cambiar al principal " + e);
+            System.out.println( "Error al cambiar al principal " + e);
         }
     }
     
@@ -248,22 +248,23 @@ public class CarritoController implements Initializable {
            
             
          } catch (Exception e) {
-             JOptionPane.showMessageDialog(null, " Error "+e);
+             System.out.println( " Error "+e);
          }
     }
 
     @FXML
     private void event_proceder_pago(ActionEvent event) {
         
+        // limpiamos la pila
         p.pila.clear();
+        // luego traemos los datos del carrito.
         p.getP_carrito();
-        // primero traemos los datos ala cola
+        // obtenemos el email.
          String email = colaP.getEmail();
          
         if (!email.equals("")) {
           
             // obtenemos el objeto que se esta comprando
-           
             Producto pro = p.getProducto(label_precio.getText());
             // recuperamos el email del usuario para instanciarlo en el objeto
             pro.setEmailUs(email);
@@ -273,13 +274,15 @@ public class CarritoController implements Initializable {
                 colaP.guardar_P_Historial(pro);
                 // y guardamos el precio
                  p.guardar_precio(label_precio.getText());
+                 
             } catch (Exception e) {
                 System.out.println("no se pudo guardar el producto en el carrito.");
             }
             
-            
             // cambiamos la scene
             cambio_scene();
+            p.eliminarPro(label_precio.getText());
+            event_siguiente(event); 
         } else {
 
             listaP.aviso_info("INFO", """

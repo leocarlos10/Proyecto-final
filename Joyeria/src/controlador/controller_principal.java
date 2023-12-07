@@ -129,7 +129,7 @@ public class controller_principal implements Initializable {
            C_Cadenashombre.setVisible(false);
            C_Cadenasmujer.setVisible(false);
         } catch (Exception e) {
-          JOptionPane.showMessageDialog(null, "ERROR en el cambio de ventana "+e);
+            System.out.println("ERROR en el cambio de ventana "+e);
         }
         
        String email = getEmail();
@@ -204,7 +204,7 @@ public class controller_principal implements Initializable {
         try {
               cambio_ventana("/vista/favoritos.fxml"); 
          } catch (Exception e) {
-             JOptionPane.showMessageDialog(null, "ERROR en el cambio de ventana "+e);
+             System.out.println("ERROR en el cambio de ventana "+e);
          }
         
         

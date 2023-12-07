@@ -128,15 +128,6 @@ public class cola_producto {
             System.out.println("Error la traer los datos del fichero historial compra" +e);
         }
     }
-
-    public void aviso_Error(String titulo, String info) {
-        Alert alerta = new Alert(Alert.AlertType.ERROR);
-        alerta.setTitle(titulo);
-        alerta.setContentText(info);
-        alerta.show();
-    }
-    
-   
     
      public String getEmail(){
          
